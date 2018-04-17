@@ -12,7 +12,7 @@ class DisplayContainer extends React.Component {
 
   return(
   <div className="display">
-
+    <p></p>
  </div>
    );
   }

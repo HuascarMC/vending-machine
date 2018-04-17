@@ -9,10 +9,11 @@ body {
 
 .display {
   position: absolute;
-  top: 200px;
-  left: 37%;
-  height: 700px;
-  background-color: rgb(101, 179, 204);
+  top: 60px;
+  left: 5%;
+  height: 550px;
+  width: 300px;
+  background-color: rgb(86, 88, 89);
   border-radius: 10px;
   perspective: 300px;
 }
@@ -61,6 +62,8 @@ button {
     text-decoration: none;
     margin-bottom: 30px;
     text-align: center;
+    margin-left: 280%;
+    margin-bottom: 100%;
 }
 
 button:hover {
