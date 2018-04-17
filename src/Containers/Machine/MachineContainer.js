@@ -9,15 +9,11 @@ class MachineContainer extends React.Component {
     this.state = {
       item: "none",
       balance: 0.00,
-      response: 0
     }
-    this.setResponseObject = this.setResponseObject.bind(this)
 }
 
 setResponseObject(data) {
-  this.setState({
-    response: data
-  })
+  this.props.setResponse(data)
 }
 
 pushOrder() {

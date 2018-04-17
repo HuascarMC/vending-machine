@@ -1,10 +1,7 @@
 import React from 'react';
 
 class BucketContainer extends React.Component {
- constructor(props) {
-  super(props);
 
-}
 
  render() {
 
