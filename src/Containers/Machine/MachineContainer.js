@@ -1,4 +1,5 @@
 import React from 'react';
+import InputContainer from '../InputContainer/InputContainer.js'
 
 class MachineContainer extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class MachineContainer extends React.Component {
   render() {
     return(
       <div className="machine">
-
+          <InputContainer />
       </div>
     )
   }
