@@ -7,7 +7,7 @@ it('should render without crashing', () => {
  shallow(<machineContainer />);
 })
 
-it('should render table tags', () => {
+it('should render div tags', () => {
  const wrapper = shallow(<machineContainer />);
  const machine = wrapper.find('.machine');
  expect(machine.exists()).toEqual(true);
