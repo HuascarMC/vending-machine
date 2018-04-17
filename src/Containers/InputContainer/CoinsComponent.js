@@ -9,12 +9,12 @@ class CoinsComponent extends React.Component {
  // Renders a form to get user input and passes the value of state to props table container.
 
   return(
-  <div className="coins">
-    <li><p className="coinValue">$0.01<button className="coin" onKeyPress={ this.updateNumber }>PENNY</button></p></li>
-    <li><p className="coinValue">$0.05<button className="coin" onKeyPress={ this.updateNumber }>NICKEL</button></p></li>
-    <li><p className="coinValue">$0.10<button className="coin" onKeyPress={ this.updateNumber }>DIME</button></p></li>
-    <li><p className="coinValue">$0.25<button className="coin" onKeyPress={ this.updateNumber }>QUARTER</button></p></li>
-    <li><p className="coinValue">$1.00<button className="coin" onKeyPress={ this.updateNumber }>DOLLAR</button></p></li>
+  <div className="coins-box">
+    <li><p className="coinValue">$0.01<button className="coin bronze" onKeyPress={ this.updateNumber }></button></p></li>
+    <li><p className="coinValue">$0.05<button className="coin silver" onKeyPress={ this.updateNumber }></button></p></li>
+    <li><p className="coinValue">$0.10<button className="coin silver" onKeyPress={ this.updateNumber }></button></p></li>
+    <li><p className="coinValue">$0.25<button className="coin silver" onKeyPress={ this.updateNumber }></button></p></li>
+    <li><p className="coinValue">$1.00<button className="coin gold" onKeyPress={ this.updateNumber }></button></p></li>
  </div>
    );
   }

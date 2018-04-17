@@ -13,10 +13,10 @@ class DisplayContainer extends React.Component {
   return(
   <div className="display">
     <ul>
-      <li><p>$0.65<button className="coke" onKeyPress={ this.updateNumber }>COKE</button></p></li>
-      <li><p>$1.00<button className="pepsi" onKeyPress={ this.updateNumber }>PEPSI</button></p></li>
-      <li><p>$1.50<button className="soda" onKeyPress={ this.updateNumber }>SODA</button></p></li>
-      <li><p>$2.00<button className="water" onKeyPress={ this.updateNumber }>WATER</button></p></li>
+      <li><p className="price">$0.65<button className="coke" onKeyPress={ this.updateNumber }>COKE</button></p></li>
+      <li><p className="price">$1.00<button className="pepsi" onKeyPress={ this.updateNumber }>PEPSI</button></p></li>
+      <li><p className="price">$1.50<button className="soda" onKeyPress={ this.updateNumber }>SODA</button></p></li>
+      <li><p className="price">$2.00<button className="water" onKeyPress={ this.updateNumber }>WATER</button></p></li>
     </ul>
  </div>
    );
