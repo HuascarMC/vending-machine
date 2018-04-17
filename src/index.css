@@ -3,3 +3,21 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.machine {
+  background-color: black;
+  padding: 350px 20px;
+  width: 50%;
+  margin: 200px auto;
+  text-align: center;
+  position: relative;
+}
+
+.get-balance-form {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  margin: -70px 0 0 -170px;
+  background-color: red;
+}
