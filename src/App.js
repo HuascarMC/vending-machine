@@ -18,9 +18,9 @@ class App extends Component {
 
 parseResponse(data) {
   this.setState({
-    item: this.state.response.data.first,
-    change: this.state.response.data.second,
-    state: this.state.response.data.third
+    item: this.state.response.first,
+    change: this.state.response.second,
+    state: this.state.response.third
   })
 
 }
@@ -36,7 +36,7 @@ setResponse(data) {
     return (
       <div className="App">
         <MachineContainer setResponse={this.setResponse} />
-        <BucketContainer />
+        <BucketContainer item={this.state.item} change={this.state.change} state={this.state.state}/>
       </div>
     );
   }
