@@ -5,22 +5,27 @@ class DisplayContainer extends React.Component {
   super(props);
 
   this.state = {
-    selection: "a"
+    selection: ""
   }
+  // this.updateItem = this.updateItem.bind(this)
 }
 // Updates the number property in state when input value changes.
 setSelection(choice) {
   this.setState({
     selection: choice
   })
+  this.updateItem(choice)
+}
+
+updateItem(choice) {
+  this.props.updateItem(choice)
 }
 
  render() {
  // Renders a form to get user input and passes the value of state to props table container.
 
   return(
-    <div>
-  <div className="choice">{this.state.selection}</div>
+
   <div className="display">
     <ul>
       <li><p className="price">$0.65<button className="coke" onClick={() => this.setSelection("coke") } >COKE</button></p></li>
@@ -29,7 +34,6 @@ setSelection(choice) {
       <li><p className="price">$2.00<button className="water" onClick={() =>this.setSelection("water") }>WATER</button></p></li>
     </ul>
  </div>
-</div>
    );
   }
  }

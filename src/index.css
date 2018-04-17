@@ -39,6 +39,21 @@ button {
 
 }
 
+.choice {
+  background-color: black;
+  color: white;
+  height: 35px;
+  width: 120px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 20px;
+  margin-left: 47%;
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 13px;
+   border: solid #c2c2c2 4px;
+   margin-top: 3%;
+}
+
 .display {
   position: absolute;
   top: 60px;
@@ -126,11 +141,6 @@ button {
   outline: none;
 }
 
-.choice {
-  margin-top: 40%;
-  background-color: black;
-  color: white;
-}
 
 .coke:hover {
   background: #67965c;
