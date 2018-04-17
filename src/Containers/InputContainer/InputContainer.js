@@ -30,7 +30,7 @@ updateNumber(evt) {
     <CoinsComponent updateBalance={this.props.updateBalance}/>
    <form onSubmit={e => { e.preventDefault(); }} className="get-balance-form">
     <p className="display-input-text">{ this.state.number }</p>
-    <button className="push" onKeyPress={ this.updateNumber }>PUSH</button>
+    <button className="push" onClick={ this.props.pushOrder }>PUSH</button>
    </form>
  </div>
    );
