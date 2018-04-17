@@ -127,7 +127,9 @@ button {
 }
 
 .choice {
+  margin-top: 40%;
   background-color: black;
+  color: white;
 }
 
 .coke:hover {
