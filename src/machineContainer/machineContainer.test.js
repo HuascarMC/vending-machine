@@ -1,5 +1,5 @@
 import React from 'react';
-import machineContainer from './machineContainer'
+import machineContainer from './MachineContainer'
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
