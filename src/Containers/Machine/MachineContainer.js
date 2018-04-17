@@ -2,7 +2,6 @@ import React from 'react';
 import InputContainer from '../InputContainer/InputContainer.js'
 import DisplayContainer from '../DisplayContainer/DisplayContainer.js'
 import axios from 'axios';
-var qs = require('qs');
 
 class MachineContainer extends React.Component {
   constructor(props) {
@@ -12,17 +11,8 @@ class MachineContainer extends React.Component {
       item: "none",
       balance: 0.00
     }
+}
 
-  }
-
-// pushOrder() {
-//   axios.get('http://localhost:4567/itemtemp')
-//   .then(response => console.log(response))
-// }
-
-
-
-  
 pushOrder() {
   axios.post('http://localhost:4567/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
     .then(function (response) {

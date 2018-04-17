@@ -1,9 +1,7 @@
 import React from 'react';
 
 class CoinsComponent extends React.Component {
- constructor(props) {
-  super(props);
-}
+
 updateBalance(balance) {
   this.props.updateBalance(balance)
 }
