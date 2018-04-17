@@ -5,7 +5,15 @@ import DisplayContainer from '../DisplayContainer/DisplayContainer.js'
 class MachineContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      selection: "a",
+    }
 
+
+  }
+
+  setSelection(selection) {
+    this.state.selection = selection;
   }
 
 
@@ -13,7 +21,8 @@ class MachineContainer extends React.Component {
     return(
       <div className="machine">
           <InputContainer />
-          <DisplayContainer />
+          <div className="choice">{this.state.selection}</div>
+          <DisplayContainer setSelection={this.setSelection.bind(this)}/>
       </div>
     )
   }

@@ -28,7 +28,7 @@ button {
   font-size: 30px;
   padding: 0;
   margin: 0;
-  color: rgb(104, 184, 66);
+  color: rgb(163, 210, 3);
 }
 
 .coins-box {
@@ -124,6 +124,10 @@ button {
   text-decoration: none;
   margin-top: 20%;
   outline: none;
+}
+
+.choice {
+  background-color: black;
 }
 
 .coke:hover {
