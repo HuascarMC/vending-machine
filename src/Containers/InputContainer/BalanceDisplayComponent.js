@@ -3,6 +3,10 @@ import React from 'react';
 class BalanceDisplay extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state ={
+      balance: 0
+    }
   }
 
   render() {
@@ -10,7 +14,7 @@ class BalanceDisplay extends React.Component {
 
     return(
       <div className="balance-display">
-        <p>a</p>
+        <p className="balance-text">${this.state.balance}</p>
       </div>
       );
     }
