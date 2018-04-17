@@ -8,7 +8,8 @@ class MachineContainer extends React.Component {
     super(props);
     this.state = {
       item: "none",
-      balance: 0.00
+      balance: 0.00,
+      response: 0
     }
     this.setResponseObject = this.setResponseObject.bind(this)
 }
@@ -53,6 +54,7 @@ updateBalance(balance) {
       <div className="machine">
           <InputContainer updateBalance={this.updateBalance.bind(this)} pushOrder={this.pushOrder.bind(this)}/>
           <DisplayContainer updateItem={this.updateItem.bind(this)} />
+
       </div>
     </div>
     )

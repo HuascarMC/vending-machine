@@ -60,6 +60,19 @@ button {
   font-size: 30px;
 }
 
+.bucket {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 6%;
+  top: 60px;
+  left: 65%;
+  height: 520px;
+  width: 300px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  perspective: 300px;
+}
+
 .display {
   position: absolute;
   top: 60px;
