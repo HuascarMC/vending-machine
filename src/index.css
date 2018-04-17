@@ -7,6 +7,10 @@ body {
   position: relative;
 }
 
+button {
+  margin-left: 50px;
+}
+
 .display {
   position: absolute;
   top: 60px;
@@ -25,7 +29,7 @@ body {
   width: 500px;
   height: 700px;
   background-color: rgb(247, 184, 89);
-  border-radius: 10px;
+  border-radius: 40px;
   perspective: 300px;
 }
 .get-balance-form {
@@ -59,7 +63,7 @@ body {
     text-decoration: none;
     margin-bottom: 30px;
     text-align: center;
-    margin-left: 280%;
+    margin-left: 240%;
     margin-bottom: 100%;
     outline: none;
 }
@@ -98,7 +102,12 @@ body {
   background: #67965c;
   text-decoration: none;
 }
-
+p {
+  color: #d1d1d1;
+  font-size: 20px;
+  margin: 5px;
+  float: left;
+}
 .pepsi {
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
