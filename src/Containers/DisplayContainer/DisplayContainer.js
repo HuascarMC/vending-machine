@@ -12,7 +12,12 @@ class DisplayContainer extends React.Component {
 
   return(
   <div className="display">
-    <p></p>
+    <ul>
+    <li><button className="coke" onKeyPress={ this.updateNumber }>COKE</button></li>
+    <li><button className="pepsi" onKeyPress={ this.updateNumber }>PEPSI</button></li>
+    <li><button className="soda" onKeyPress={ this.updateNumber }>SODA</button></li>
+    <li><button className="water" onKeyPress={ this.updateNumber }>WATER</button></li>
+  </ul>
  </div>
    );
   }

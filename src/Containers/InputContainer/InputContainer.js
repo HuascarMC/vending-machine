@@ -25,7 +25,7 @@ updateNumber(evt) {
   <div className="controller">
    <form onSubmit={e => { e.preventDefault(); }} className="get-balance-form">
     <p className="display-input-text">{ this.state.number }</p>
-    <button onKeyPress={ this.updateNumber }>PUSH</button>
+    <button className="push" onKeyPress={ this.updateNumber }>PUSH</button>
    </form>
  </div>
    );
