@@ -11,16 +11,25 @@ button {
   margin-left: 50px;
 }
 
-balance-display {
-  height: 100px;
-  width: 100px;
+.balance-display {
+  height: 35px;
+  width: 120px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 20px;
+  margin-left: 70%;
+  margin-top: 13%;
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 13px;
+   border: solid #c2c2c2 4px;
 }
 
 .coins-box {
   width: 200px;
   height: 300px;
   margin-left: 60%;
-  margin-top: 20%;
+  margin-top: 3%;
+
 }
 
 .display {
