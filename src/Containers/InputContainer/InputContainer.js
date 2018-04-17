@@ -26,7 +26,7 @@ updateNumber(evt) {
   return(
 
   <div className="controller">
-    <BalanceDisplayComponent />
+    <BalanceDisplayComponent balance={this.props.balance} />
     <CoinsComponent updateBalance={this.props.updateBalance}/>
    <form onSubmit={e => { e.preventDefault(); }} className="get-balance-form">
     <p className="display-input-text">{ this.state.number }</p>
