@@ -1,4 +1,5 @@
 import React from 'react';
+import CoinsComponent from './CoinsComponent.js'
 
 class InputContainer extends React.Component {
  constructor(props) {
@@ -22,8 +23,9 @@ updateNumber(evt) {
  // Renders a form to get user input and passes the value of state to props table container.
 
   return(
+
   <div className="controller">
-  <button className="INSERT PENNY" onKeyPress={ this.updateNumber }>INSERT PENNY</button>
+    <CoinsComponent />
    <form onSubmit={e => { e.preventDefault(); }} className="get-balance-form">
     <p className="display-input-text">{ this.state.number }</p>
     <button className="push" onKeyPress={ this.updateNumber }>PUSH</button>
@@ -33,9 +35,5 @@ updateNumber(evt) {
   }
  }
 
- // 
- // <li><p>$0.65<button className="coke" onKeyPress={ this.updateNumber }>COKE</button></p></li>
- // <li><p>$1.00<button className="pepsi" onKeyPress={ this.updateNumber }>PEPSI</button></p></li>
- // <li><p>$1.50<button className="soda" onKeyPress={ this.updateNumber }>SODA</button></p></li>
- // <li><p>$2.00<button className="water" onKeyPress={ this.updateNumber }>WATER</button></p></li>
+
 export default InputContainer;

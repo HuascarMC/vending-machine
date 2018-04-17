@@ -11,6 +11,13 @@ button {
   margin-left: 50px;
 }
 
+.coins {
+  width: 200px;
+  height: 300px;
+  margin-left: 60%;
+  margin-top: 40%;
+}
+
 .display {
   position: absolute;
   top: 60px;
