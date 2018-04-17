@@ -6,21 +6,28 @@ import axios from 'axios';
 class MachineContainer extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       item: "none",
       balance: 0.00
     }
+    this.setResponseObject = this.setResponseObject.bind(this)
+}
+
+setResponseObject(data) {
+  this.setState({
+    response: data
+  })
 }
 
 pushOrder() {
-  axios.post('http://localhost:4567/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
+   let response = axios.post('http://localhost:4567/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
     .then(function (response) {
       console.log(response);
     })
     .catch(function (error) {
       console.log(error);
     });
+    this.setResponseObject(response);
 }
 
 updateItem(item) {
