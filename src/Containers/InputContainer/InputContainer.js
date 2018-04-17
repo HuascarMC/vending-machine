@@ -22,10 +22,12 @@ updateNumber(evt) {
  // Renders a form to get user input and passes the value of state to props table container.
 
   return(
+  <div className="controller">
    <form onSubmit={e => { e.preventDefault(); }} className="get-balance-form">
-    <p className="display-input-text">Please enter your balance { this.state.number }</p>
-    <input onSubmit={e => { e.preventDefault(); }} className="get-number-input" onKeyPress={ this.updateNumber }/>
+    <p className="display-input-text">{ this.state.number }</p>
+    <button onKeyPress={ this.updateNumber }>PUSH</button>
    </form>
+ </div>
    );
   }
  }

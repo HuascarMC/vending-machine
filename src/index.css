@@ -1,23 +1,74 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
-.machine {
-  background-color: black;
-  padding: 350px 20px;
-  width: 50%;
-  margin: 200px auto;
-  text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: rgb(91, 168, 193);
+	width: 100%;
+	height: 100%;
+	min-height: 770px;
   position: relative;
 }
 
+.display {
+  position: absolute;
+  top: 200px;
+  left: 37%;
+  height: 700px;
+  background-color: rgb(101, 179, 204);
+  border-radius: 10px;
+  perspective: 300px;
+}
+
+.machine {
+  position: absolute;
+  top: 200px;
+  left: 37%;
+  width: 500px;
+  height: 700px;
+  background-color: rgb(247, 184, 89);
+  border-radius: 10px;
+  perspective: 300px;
+}
 .get-balance-form {
   position: absolute;
   bottom: 0;
   left: 50%;
 
   margin: -70px 0 0 -170px;
-  background-color: red;
+  background-color: rgb(247, 184, 89);
+}
+
+.controller {
+  background-color: rgb(198, 186, 112);
+}
+
+button {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 48;
+    -moz-border-radius: 48;
+    border-radius: 48px;
+    -webkit-box-shadow: 0px 8px 0px #000000;
+    -moz-box-shadow: 0px 8px 0px #000000;
+    box-shadow: 0px 8px 0px #000000;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 7px 15px 7px 17px;
+    border: solid #1f628d 8px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+button:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #040a0f);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #040a0f);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #040a0f);
+    background-image: -o-linear-gradient(top, #3cb0fd, #040a0f);
+    background-image: linear-gradient(to bottom, #3cb0fd, #040a0f);
+    text-decoration: none;
 }

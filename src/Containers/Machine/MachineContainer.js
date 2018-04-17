@@ -1,5 +1,6 @@
 import React from 'react';
 import InputContainer from '../InputContainer/InputContainer.js'
+import DisplayContainer from '../DisplayContainer/DisplayContainer.js'
 
 class MachineContainer extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class MachineContainer extends React.Component {
     return(
       <div className="machine">
           <InputContainer />
+          <DisplayContainer />
       </div>
     )
   }

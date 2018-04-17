@@ -10,7 +10,7 @@ it('should render without crashing', () => {
 it('should render div tags', () => {
  const wrapper = shallow(<machineContainer />);
  const div = wrapper.find("machine");
- expect(div.exists()).toEqual(false);
+ expect(diva.exists()).toEqual(false);
 })
 
 it('should match the snapshot', () => {
