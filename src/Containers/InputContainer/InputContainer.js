@@ -1,5 +1,6 @@
 import React from 'react';
 import CoinsComponent from './CoinsComponent.js'
+import BalanceDisplayComponent from './BalanceDisplayComponent.js'
 
 class InputContainer extends React.Component {
  constructor(props) {
@@ -25,6 +26,7 @@ updateNumber(evt) {
   return(
 
   <div className="controller">
+    <BalanceDisplayComponent />
     <CoinsComponent />
    <form onSubmit={e => { e.preventDefault(); }} className="get-balance-form">
     <p className="display-input-text">{ this.state.number }</p>

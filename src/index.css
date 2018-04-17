@@ -11,6 +11,11 @@ button {
   margin-left: 50px;
 }
 
+balance-display {
+  height: 100px;
+  width: 100px;
+}
+
 .coins-box {
   width: 200px;
   height: 300px;
