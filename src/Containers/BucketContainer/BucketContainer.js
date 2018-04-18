@@ -33,9 +33,14 @@ class BucketContainer extends React.Component {
   var result = this.generateChange()
    // var result = this.generateChange()
   return(
+  <div>
+    <div className="changeTotal">
+      {this.props.changeTotal}
+    </div>
   <div className="bucket">
     { result }
  </div>
+</div>
    );
   }
  }
