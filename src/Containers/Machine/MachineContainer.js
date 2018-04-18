@@ -14,6 +14,11 @@ class MachineContainer extends React.Component {
     this.tryOrder = this.tryOrder.bind(this);
 }
 
+pushReturn() {
+  this.setState({
+    balance: 0.00
+  })
+}
 
 pushOrder() {
   this.tryOrder();
@@ -58,7 +63,7 @@ updateBalance(balance) {
       <p className="title">Your balance:</p>
       <div className="choice" >{this.state.balance.toFixed(2)}</div>
       <div className="machine">
-          <InputContainer updateBalance={this.updateBalance.bind(this)} pushOrder={this.pushOrder.bind(this)} balance={this.state.balance}/>
+          <InputContainer updateBalance={this.updateBalance.bind(this)} pushReturn={this.pushReturn.bind(this)} pushOrder={this.pushOrder.bind(this)} balance={this.state.balance}/>
           <DisplayContainer updateItem={this.updateItem.bind(this)} />
 
       </div>

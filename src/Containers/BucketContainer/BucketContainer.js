@@ -1,5 +1,5 @@
 import React from 'react';
-
+var ChangeHandler = require('../../tools/ChangeHandler/');
 
 class BucketContainer extends React.Component {
 

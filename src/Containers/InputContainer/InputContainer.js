@@ -28,6 +28,7 @@ updateNumber(evt) {
   <div className="controller">
     <BalanceDisplayComponent balance={this.props.balance} />
     <CoinsComponent updateBalance={this.props.updateBalance}/>
+    <button className="return" onClick={ this.props.pushReturn }>RETURN</button>
    <form onSubmit={e => { e.preventDefault(); }} className="get-balance-form">
     <p className="display-input-text">{ this.state.number }</p>
     <button className="push" onClick={ this.props.pushOrder }>PUSH</button>
