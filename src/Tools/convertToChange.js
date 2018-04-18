@@ -1,5 +1,5 @@
-convertToChange = function(value) {
-  result = []
+var convertToChange = function(value) {
+  let result = []
   while(value > 0) {
     if(value >= 1.00) {
       result.push("DOLLAR")

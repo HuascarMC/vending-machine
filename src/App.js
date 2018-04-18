@@ -11,12 +11,18 @@ class App extends Component {
       state: 0,
       change: 0,
       item: 0,
-      changeTotal: 0.00
+      changeTotal: 0.00,
+      returnChangeValue: 0.00
     }
     this.setResponse = this.setResponse.bind(this)
+    this.getReturnChangeValue = this.getReturnChangeValue.bind(this)
 }
 
-
+getReturnChangeValue(amount) {
+  this.setState({
+    returnChangeValue: amount
+  })
+}
 setResponse(data) {
   console.log(data.data);
   if(data !== undefined) {
@@ -33,7 +39,7 @@ setResponse(data) {
 
     return (
       <div className="App">
-        <MachineContainer setResponse={this.setResponse} />
+        <MachineContainer setResponse={this.setResponse} getReturn={this.getReturnChangeValue} />
         <BucketContainer item={this.state.item} change={this.state.change} state={this.state.state} changeTotal={this.state.changeTotal}/>
       </div>
     );
