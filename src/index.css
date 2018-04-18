@@ -31,6 +31,8 @@ button {
   border-radius: 13px;
    border: solid #c2c2c2 4px;
    margin: 0 0 0 75%;
+     color: rgb(163, 210, 3);
+     font-size: 33;
 }
 
 .balance-display {

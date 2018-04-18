@@ -10,7 +10,7 @@ class App extends Component {
       state: 0,
       change: 0,
       item: 0,
-      changeTotal: 0
+      changeTotal: 0.00
     }
     this.setResponse = this.setResponse.bind(this)
 }
