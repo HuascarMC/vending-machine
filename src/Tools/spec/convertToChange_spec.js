@@ -11,4 +11,13 @@ describe('convertToChange', function () {
   assert.deepEqual(actualResult, expectedResult)
  });
 
+ it('it converts change quarter', function () {
+  const actualResult = convertToChange(0.25)
+  const expectedResult = ["QUARTER"]
+  console.log(actualResult);
+  assert.deepEqual(actualResult, expectedResult)
+ });
+
+
+
 });
