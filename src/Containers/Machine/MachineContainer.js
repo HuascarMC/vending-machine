@@ -15,10 +15,8 @@ class MachineContainer extends React.Component {
 }
 
 pushReturn() {
-  this.props.getReturn(this.state.balance)
-  this.setState({
-    balance: 0.00
-  })
+  this.props.setChange(this.state.balance)
+  this.resetBalance()
 }
 
 pushOrder() {

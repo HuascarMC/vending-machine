@@ -3,12 +3,24 @@ var convertToChange = require('../../Tools/convertToChange');
 
 class BucketContainer extends React.Component {
 
+  componentDidMount()
+{
+  this.props.resetChange();
+}
+
+componentDidUpdate()
+{
+  this.props.resetChange();
+  console.log("hi")
+}
+
+
   generateChange(change) {
     var htmlChange = []
     for(var i = 0; i < change.length; i++) {
       htmlChange.unshift(this.generateCoin(change[i]))
   }
-  console.log(this);
+  console.log(change);
   return htmlChange
 }
 
@@ -29,19 +41,18 @@ generateCoin(coin) {
 
 render() {
   var result;
-  if(this.props.change !== "undefined" && this.props.change !== 0) {
-    result = this.generateChange(this.props.change)
-    console.log(this.props.change);
-  } else if (this.props.returnValue !== 0){
-    console.log(convertToChange(this.props.returnValue));
-    result = this.generateChange(convertToChange(this.props.returnValue))
-  }
+    if ((typeof this.props.change) == "number") {
+      result = this.generateChange(convertToChange(this.props.change))
+    } else {
+      result = this.generateChange(this.props.change)
+    }
+    console.log(typeof this.props.change);
   // var result = this.generateChange()
   return(
     <div>
       <p className="title-total-change">Change Total: </p>
       <div className="changeTotal">
-        <p className="balance-text">${ this.props.changeTotal.toFixed(2) }</p>
+        <p className="balance-text">${ this.props.changeTotal }</p>
       </div>
       <div className="bucket">
         { result }
