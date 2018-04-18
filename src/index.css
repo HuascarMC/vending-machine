@@ -15,6 +15,11 @@ button {
   text-decoration-color : white !important;
 }
 
+.title-total-change {
+  margin: 0 0 0 56% !important;
+  font-size: 30px;
+}
+
 .changeTotal {
   height: 35px;
   width: 120px;
@@ -78,13 +83,13 @@ button {
 }
 
 .title {
-  margin: 1% 0 0 0!important;
+  margin: 1% 0 0 0 !important;
   font-size: 30px;
 }
 
 .bucket {
   position: absolute;
-  margin-top: 10%;
+  margin-top: 12%;
   margin-left: 6%;
   top: 60px;
   left: 65%;

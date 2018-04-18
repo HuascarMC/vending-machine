@@ -34,6 +34,7 @@ class BucketContainer extends React.Component {
    // var result = this.generateChange()
   return(
   <div>
+    <p className="title-total-change">Total Change: </p>
     <div className="changeTotal">
       {this.props.changeTotal}
     </div>
