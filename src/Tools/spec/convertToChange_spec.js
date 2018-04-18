@@ -39,6 +39,13 @@ describe('convertToChange', function () {
   assert.deepEqual(actualResult, expectedResult)
  });
 
+ it('it converts change penny', function () {
+  const actualResult = convertToChange(1.41)
+  const expectedResult = ["DOLLAR", "QUARTER", "DIME", "NICKEL", "PENNY"]
+  console.log(actualResult);
+  assert.deepEqual(actualResult, expectedResult)
+ });
+
 
 
 });
