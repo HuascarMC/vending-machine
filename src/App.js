@@ -9,7 +9,8 @@ class App extends Component {
     this.state = {
       state: 0,
       change: 0,
-      item: 0
+      item: 0,
+      changeTotal: 0
     }
     this.setResponse = this.setResponse.bind(this)
 }
@@ -21,7 +22,8 @@ setResponse(data) {
     this.setState({
       item: data.data.first,
       change: data.data.second,
-      state: data.data.third
+      state: data.data.third,
+      changeTotal: data.data.fourth
     })
   }
 }
@@ -31,7 +33,7 @@ setResponse(data) {
     return (
       <div className="App">
         <MachineContainer setResponse={this.setResponse} />
-        <BucketContainer item={this.state.item} change={this.state.change} state={this.state.state}/>
+        <BucketContainer item={this.state.item} change={this.state.change} state={this.state.state} changeTotal={this.state.changeTotal}/>
       </div>
     );
   }
