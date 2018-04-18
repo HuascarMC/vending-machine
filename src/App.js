@@ -7,30 +7,25 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      response: 0,
       state: 0,
-      change: [],
+      change: 0,
       item: 0
     }
     this.setResponse = this.setResponse.bind(this)
-    this.parseResponse = this.parseResponse.bind(this)
 }
 
-parseResponse(data) {
-  this.setState({
-    item: this.state.response.first,
-    change: this.state.response.second,
-    state: this.state.response.third
-  })
-
-}
 
 setResponse(data) {
-  this.setState({
-    response: data
-  })
-  this.parseResponse(data)
+  console.log(data.data);
+  if(data !== undefined) {
+    this.setState({
+      item: data.data.first,
+      change: data.data.second,
+      state: data.data.third
+    })
+  }
 }
+
   render() {
 
     return (
