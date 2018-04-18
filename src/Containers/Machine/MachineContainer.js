@@ -14,6 +14,8 @@ class MachineContainer extends React.Component {
     this.tryOrder = this.tryOrder.bind(this);
 }
 
+
+
 pushReturn() {
   this.props.setChange(this.state.balance)
   this.resetBalance()
@@ -26,7 +28,7 @@ pushOrder() {
 tryOrder() {
   axios.post('http://localhost:4567/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
  .then((response) => {
-   console.log(response);
+   // console.log(response);
    this.props.setResponse(response)
    this.resetBalance()
  })

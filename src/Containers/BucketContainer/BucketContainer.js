@@ -11,7 +11,6 @@ class BucketContainer extends React.Component {
 componentDidUpdate()
 {
   this.props.resetChange();
-  console.log("hi")
 }
 
 
