@@ -15,18 +15,18 @@ Setup the [server-repo](https://github.com/HuascarMC/vending-machine-rest-api) t
 
 ![alt-text](/src/images/vm-example.png)
 
-[Here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
+Click [here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
 
 
 ## How to run
 
 - Clone this repo into your local machine.
 ```
-git clone https://github.com/HuascarMC/prime-multiplication-table-react
+git clone https://github.com/HuascarMC/vending-machine-client
 ```
-- Go inside your prime-multiplication-table-react directory.
+- Go inside directory.
 ```
-cd prime-multiplication-table-react
+cd vending-machine-client
 ```
 - Install all the packages required.
 ```
@@ -51,7 +51,6 @@ http://localhost:3000
 - The app will display an input box, you should be able to get a prime multiplication table by typing a number 0 < 500
 and pressing enter.
 
-![alt text](images/screenshot.png)
 
 ## Functionality
 
