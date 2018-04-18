@@ -84,6 +84,11 @@ button {
    font-size: 30px;
 }
 
+.state-title {
+  font-size: 30px;
+  margin-right: 70%;
+}
+
 .title {
   margin: 1% 0 0 0 !important;
   font-size: 30px;

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class BucketContainer extends React.Component {
 
   generateChange() {
@@ -32,6 +33,7 @@ class BucketContainer extends React.Component {
  render() {
   var result = this.generateChange()
    // var result = this.generateChange()
+   console.log(this.props.state.stockInventoryState);
   return(
   <div>
     <p className="title-total-change">Change Total: </p>
@@ -41,6 +43,11 @@ class BucketContainer extends React.Component {
   <div className="bucket">
     { result }
  </div>
+<div>
+  <p className="state-title">In Stock: {JSON.stringify(this.props.state.stockInventoryState) } </p>
+  <p className="state-title">Enough change: {JSON.stringify(this.props.state.coinInventoryState) } </p>
+  <p className="state-title">Enough balance: {JSON.stringify(this.props.state.balanceState) } </p>
+</div>
 </div>
    );
   }
