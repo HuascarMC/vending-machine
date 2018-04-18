@@ -5,10 +5,11 @@ class BucketContainer extends React.Component {
 
   generateChange(change) {
     var htmlChange = []
-    for(var i = 0; i < this.props.change.length; i++) {
-      htmlChange.unshift(this.generateCoin(this.props.change[i]))
-    return htmlChange
+    for(var i = 0; i < change.length; i++) {
+      htmlChange.unshift(this.generateCoin(change[i]))
   }
+  console.log(this);
+  return htmlChange
 }
 
 generateCoin(coin) {
@@ -20,7 +21,7 @@ generateCoin(coin) {
     case "DIME":
     return <li><p className="coinValue change">{coin.toString()}      $0.05<button className="coin silver" onClick={ () => this.updateBalance(0.05) }></button></p></li>
     case "QUARTER":
-    return <li><p className="coinValue change">{coin.toString()}      $1.00<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p></li>
+    return <li><p className="coinValue change">{coin.toString()}      $0.25<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p></li>
     case "DOLLAR":
     return <li><p className="coinValue change">{coin.toString()}       $1.00<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p></li>
   }
@@ -28,13 +29,14 @@ generateCoin(coin) {
 
 render() {
   var result;
-  if(this.props.change !== "undefined") {
+  if(this.props.change !== "undefined" && this.props.change !== 0) {
     result = this.generateChange(this.props.change)
-  } else {
+    console.log(this.props.change);
+  } else if (this.props.returnValue !== 0){
+    console.log(convertToChange(this.props.returnValue));
     result = this.generateChange(convertToChange(this.props.returnValue))
   }
   // var result = this.generateChange()
-  console.log(convertToChange(this.props.returnValue));
   return(
     <div>
       <p className="title-total-change">Change Total: </p>
