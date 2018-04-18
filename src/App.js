@@ -40,7 +40,7 @@ setResponse(data) {
     return (
       <div className="App">
         <MachineContainer setResponse={this.setResponse} getReturn={this.getReturnChangeValue} />
-        <BucketContainer item={this.state.item} change={this.state.change} state={this.state.state} changeTotal={this.state.changeTotal}/>
+        <BucketContainer item={this.state.item} change={this.state.change} state={this.state.state} changeTotal={this.state.changeTotal} returnValue={this.state.returnChangeValue}/>
       </div>
     );
   }
