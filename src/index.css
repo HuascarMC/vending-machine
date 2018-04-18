@@ -11,6 +11,10 @@ button {
   margin-left: 50px;
 }
 
+.bucket {
+  text-decoration-color : white !important;
+}
+
 .balance-display {
   height: 35px;
   width: 120px;
@@ -37,6 +41,11 @@ button {
   margin-left: 60%;
   margin-top: 3%;
 
+}
+
+.change{
+  color: white !important;
+  margin-right: 10%;
 }
 
 .choice {
