@@ -163,8 +163,13 @@ img {
   left: 37%;
   width: 500px;
   height: 700px;
+	-webkit-box-shadow: 18px 20px 10px #000000;
+	-moz-box-shadow: 18px 20px 10px #000000;
+	box-shadow: 18px 20px 10px #000000;
   background-color: rgb(247, 184, 89);
   border-radius: 40px;
+	border-color: grey;
+	border-style: groove;
   perspective: 300px;
 }
 .get-balance-form {
@@ -385,6 +390,7 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
   z-index: 700;
   top: -19px;
   left: 19px;
+
   }
 
 .coin.bronze p{  color: rgba(223,182,103,1);}
@@ -404,6 +410,9 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
   z-index: 500;
   box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .1);
   outline: none;
+	-webkit-box-shadow: 18px 10px 10px #000000;
+	-moz-box-shadow: 18px 10px 10px #000000;
+	box-shadow: 18px 10px 10px #000000;
   }
 
 .coin:after{

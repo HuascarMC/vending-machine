@@ -41,7 +41,7 @@ setImage() {
       case "PEPSI":
       return this.setimg("http://pngimg.com/uploads/pepsi/pepsi_PNG8.png")
       case "SODA":
-      return this.setimg("http://www.pngall.com/wp-content/uploads/2016/05/Sprite.png")
+      return this.setimg("http://www.pngall.com/wp-content/uploads/2016/04/Coconut-Free-Download-PNG.png")
       case "WATER":
       return this.setimg("http://www.pngall.com/wp-content/uploads/2016/04/Water-Bottle-PNG-Picture.png")
     }
