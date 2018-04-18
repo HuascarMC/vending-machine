@@ -11,7 +11,7 @@ Based on the response it renders what's necessary to simulate the operation of a
 
 # NOTE:
 The server currently runs locally so running this by itself will only render the looks without any functionality.
-Setup the ![server-repo](https://github.com/HuascarMC/vending-machine-rest-api) too for functionality.
+Setup the [server-repo](https://github.com/HuascarMC/vending-machine-rest-api) too for functionality.
 
 ![alt-text](/src/images/vm-example.png)
 
