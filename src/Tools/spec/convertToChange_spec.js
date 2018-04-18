@@ -25,6 +25,20 @@ describe('convertToChange', function () {
   assert.deepEqual(actualResult, expectedResult)
  });
 
+ it('it converts change nickel', function () {
+  const actualResult = convertToChange(0.05)
+  const expectedResult = ["NICKEL"]
+  console.log(actualResult);
+  assert.deepEqual(actualResult, expectedResult)
+ });
+
+ it('it converts change penny', function () {
+  const actualResult = convertToChange(0.01)
+  const expectedResult = ["PENNY"]
+  console.log(actualResult);
+  assert.deepEqual(actualResult, expectedResult)
+ });
+
 
 
 });
