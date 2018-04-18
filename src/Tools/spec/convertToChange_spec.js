@@ -18,6 +18,13 @@ describe('convertToChange', function () {
   assert.deepEqual(actualResult, expectedResult)
  });
 
+ it('it converts change dime', function () {
+  const actualResult = convertToChange(0.1)
+  const expectedResult = ["DIME"]
+  console.log(actualResult);
+  assert.deepEqual(actualResult, expectedResult)
+ });
+
 
 
 });
