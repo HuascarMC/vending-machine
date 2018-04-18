@@ -44,7 +44,7 @@ a
 ```
 npm start
 ```
-- If your browser doesn't open autmatically, go to:
+- If your browser doesn't open automatically, go to:
 ```
 http://localhost:3000
 ```
