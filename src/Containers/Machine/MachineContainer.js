@@ -24,10 +24,17 @@ tryOrder() {
  .then((response) => {
    console.log(response);
    this.props.setResponse(response)
+   this.resetBalance()
  })
  .catch(function (error) {
    console.log(error);
  })
+}
+
+resetBalance() {
+  this.setState({
+    balance: 0.00
+  })
 }
 
 updateItem(item) {
