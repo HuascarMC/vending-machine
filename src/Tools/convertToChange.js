@@ -1,9 +1,10 @@
 var convertToChange = function(value) {
-  let result = []
-  while(value > 0) {
+  var result = []
+  while(value > 0.00) {
     if(value >= 1.00) {
       result.push("DOLLAR")
       value -= 1.00;
+      console.log(value);
     } else if (value >= 0.25) {
       result.push("QUARTER")
       value -= 0.25;
@@ -20,6 +21,7 @@ var convertToChange = function(value) {
       return result;
     }
   }
+  return result;
 }
 
 module.exports = convertToChange;
