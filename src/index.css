@@ -20,6 +20,15 @@ button {
   font-size: 30px;
 }
 
+.transaction-state-container {
+  margin-top: 20%;
+}
+
+.title-transaction-state {
+  margin: -4% 73% 0 0 !important;
+  font-size: 30px;
+}
+
 .changeTotal {
   height: 35px;
   width: 120px;
@@ -84,14 +93,30 @@ button {
    font-size: 30px;
 }
 
+.transaction-state {
+  margin-top: 0%;
+  margin-left: 6%;
+  top: 60px;
+  left: 65%;
+  height: 200px;
+  width: 300px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  perspective: 300px;
+}
+
 .state-title {
-  font-size: 30px;
+  font-size: 20px;
   margin-right: 70%;
+  color: white;
+  width: 300px;
+  margin-top: 15%;
+
 }
 
 .title {
   margin: 1% 0 0 0 !important;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .bucket {
