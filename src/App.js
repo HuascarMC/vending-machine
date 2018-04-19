@@ -21,12 +21,6 @@ class App extends Component {
     this.setImage = this.setImage.bind(this)
 }
 
-resetChange() {
-  this.setState({
-    change: 0
-  })
-}
-
 componentDidUpdate() {
   this.setImage()
 }
@@ -83,7 +77,7 @@ setimg(src) {
           <img src={this.state.imgsrc}/>
         </div>
         <MachineContainer setResponse={this.setResponse} setChange={this.setChange} setimg={this.setimg} state={this.state}/>
-        <BucketContainer state={this.state} resetChange={() =>this.resetChange}/>
+        <BucketContainer state={this.state} setChange={() =>this.setChange}/>
       </div>
     );
   }

@@ -6,11 +6,11 @@ var convertToChange = require('../../Tools/convertToChange');
 class BucketContainer extends React.Component {
 
   componentDidMount() {
-    this.props.resetChange();
+    this.props.setChange(0);
   }
 
   componentDidUpdate() {
-    this.props.resetChange();
+    this.props.setChange(0);
   }
 
   generateChange(change) {
