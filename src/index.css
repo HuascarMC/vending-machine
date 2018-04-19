@@ -87,6 +87,23 @@ button {
    border: solid #c2c2c2 4px;
 }
 
+.plus {
+	margin-left: 30%;
+	background-color: green;
+	font-family: Arial;
+font-size: 20px;
+padding: 5px 10px 5px 10px;
+text-decoration: none;
+}
+
+.minus {
+	margin-left: 4px;
+	background-color: red;
+	padding: 5px 10px 5px 10px;
+	font-family: Arial;
+font-size: 20px;
+}
+
 .balance-text {
   font-size: 30px;
   padding: 0;
