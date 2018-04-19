@@ -22,7 +22,6 @@ class MachineMaintenanceContainer extends React.Component {
     this.increaseItemQuantity = this.increaseItemQuantity.bind(this);
     this.reduceCoinQuantity = this.reduceCoinQuantity.bind(this);
     this.reduceItemQuantity = this.reduceItemQuantity.bind(this);
-    this
   }
 
 componentDidMount() {

@@ -2,6 +2,7 @@ import React from 'react';
 import InputContainer from '../InputContainer/InputContainer.js'
 import DisplayContainer from '../DisplayContainer/DisplayContainer.js'
 import axios from 'axios';
+import MachineMaintenanceContainer from '../MachineMaintenanceContainer/MachineMaintenanceContainer.js'
 
 class MachineContainer extends React.Component {
   constructor(props) {
@@ -59,6 +60,7 @@ updateBalance(balance) {
   render() {
     return(
       <div>
+        <MachineMaintenanceContainer />
         <p className="title">Your choice</p>
       <div className="choice" >{this.state.item}</div>
       <p className="title">Your balance:</p>
