@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MachineContainer from './Containers/Machine/MachineContainer.js'
 import BucketContainer from './Containers/BucketContainer/BucketContainer.js'
+import MachineMaintenanceContainer from './Containers/MachineMaintenanceContainer/MachineMaintenanceContainer.js'
 import './App.css';
 
 
@@ -28,7 +29,6 @@ resetChange() {
 }
 
 componentDidUpdate() {
-  console.log("lol");
   this.setImage()
 }
 
@@ -79,9 +79,11 @@ setimg(src) {
   render() {
     return (
       <div className="App">
+        <p className="img-title">YOUR ORDER HERE:</p>
         <div className="img-container">
           <img src={this.state.imgsrc}/>
         </div>
+        <MachineMaintenanceContainer />
         <MachineContainer setResponse={this.setResponse} setChange={this.setChange} setimg={this.setimg} state={this.state}/>
         <BucketContainer item={this.state.item} resetChange={() =>this.resetChange}  change={this.state.change} state={this.state.state} changeTotal={this.state.changeTotal} returnValue={this.state.returnChangeValue}/>
       </div>

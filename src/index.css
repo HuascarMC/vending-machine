@@ -11,6 +11,18 @@ button {
   margin-left: 50px;
 }
 
+.maintenance {
+	position: absolute;
+	margin-top: 13%;
+	right: 65%;
+	top: 60px;
+	height: 520px;
+	width: 190px;
+	background-color: rgb(37, 37, 37);
+	border-radius: 10px;
+	perspective: 300px;
+}
+
 .bucket {
   text-decoration-color : white !important;
 }
@@ -143,12 +155,20 @@ button {
   perspective: 300px;
 }
 
+.img-title {
+	font-size: 20px;
+	margin-right: 73%;
+}
+
 .img-container {
 		position: absolute;
     height: 300px;
     width: 300px;
-		margin-top: 5%;
+		margin-top: 1%;
 		margin-left: 6%;
+		background-color: rgb(37, 37, 37);
+		border-radius: 10px;
+		perspective: 300px;
 }
 
 img {
