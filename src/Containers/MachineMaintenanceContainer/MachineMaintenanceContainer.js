@@ -22,10 +22,11 @@ class MachineMaintenanceContainer extends React.Component {
     this.increaseItemQuantity = this.increaseItemQuantity.bind(this);
     this.reduceCoinQuantity = this.reduceCoinQuantity.bind(this);
     this.reduceItemQuantity = this.reduceItemQuantity.bind(this);
+    this
   }
 
 componentDidMount() {
- this.setMaintenanceInfo();
+  this.setMaintenanceInfo();
 }
 
 setMaintenanceInfo = () => {
@@ -36,6 +37,7 @@ setMaintenanceInfo = () => {
 getItems = () => {
     axios.get('http://localhost:4567/machine/items', { crossdomain: true })
    .then((response) => {
+     console.log(response);
      this.setItemsQuantity(response.data)
    })
    .catch(function (error) {
@@ -46,6 +48,7 @@ getItems = () => {
 getCoins = () => {
   axios.get('http://localhost:4567/machine/coins', { crossdomain: true})
   .then((response) => {
+    console.log(response);
     this.setCoinsQuantity(response.data)
   })
   .catch(function (error) {
@@ -55,10 +58,10 @@ getCoins = () => {
 
 setItemsQuantity(data) {
   this.setState({
-    COKE: data[0].quantity,
-    PEPSI: data[1].quantity,
-    SODA: data[2].quantity,
-    WATER: data[3].quantity
+    COKE: data[3].quantity,
+    PEPSI: data[2].quantity,
+    SODA: data[1].quantity,
+    WATER: data[0].quantity
   })
 }
 
@@ -67,8 +70,8 @@ setCoinsQuantity(data) {
     DOLLAR: data[0].quantity,
     QUARTER: data[1].quantity,
     DIME: data[2].quantity,
-    NICKEL: data[3].quantity,
-    PENNY: data[4].quantity
+    NICKEL: data[4].quantity,
+    PENNY: data[3].quantity
   })
 }
 
@@ -76,6 +79,7 @@ increaseItemQuantity(item) {
   axios.put(`http://localhost:4567/machine/additem/${item}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
+this.setMaintenanceInfo();
   })
   .catch(function (error) {
     console.log(error);
@@ -86,6 +90,7 @@ increaseCoinQuantity(coin) {
   axios.put(`http://localhost:4567/machine/addcoin/${coin}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
+this.setMaintenanceInfo();
   })
   .catch(function (error) {
     console.log(error);
@@ -96,6 +101,7 @@ reduceItemQuantity(item) {
   axios.put(`http://localhost:4567/machine/removeitem/${item}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
+this.setMaintenanceInfo();
   })
   .catch(function (error) {
     console.log(error);
@@ -106,6 +112,7 @@ reduceCoinQuantity(coin) {
   axios.put(`http://localhost:4567/machine/removecoin/${coin}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
+  this.setMaintenanceInfo();
   })
   .catch(function (error) {
     console.log(error);
