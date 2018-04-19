@@ -20,7 +20,7 @@ class MachineMaintenanceContainer extends React.Component {
 
 
 getItems() {
-    axios.get('http://localhost:4567/machine/items', JSON.stringify({item: this.state.item, balance: this.state.balance}))
+    axios.get('http://localhost:4567/machine/items', { crossdomain: true })
    .then((response) => {
      this.setItemsQuantity(response.data)
    })
@@ -29,17 +29,28 @@ getItems() {
    })
 }
 
-// setItemsQuantity(data) {
-//   this.setState({
-//     COKE: coke,
-//
-//   })
-// }
+setItemsQuantity(data) {
+  this.setState({
+    COKE: data[0].quantity,
+    PEPSI: data[1].quantity,
+    SODA: data[2].quantity,
+    WATER: data[3].quantity
+  })
+}
+
+setCoinsQuantity(data) {
+  this.setState({
+    DOLLAR: data[0].quantity,
+    QUARTER: data[1].quantity,
+    DIME: data[2].quantity,
+    NICKEL: data[3].quantity,
+    PENNY: data[4].quantity
+  })
+}
 
 
 
   render() {
-    this.getItems()
     return(
       <div className="maintenance">
         <div className="stock ">
