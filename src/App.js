@@ -83,7 +83,7 @@ setimg(src) {
           <img src={this.state.imgsrc}/>
         </div>
         <MachineContainer setResponse={this.setResponse} setChange={this.setChange} setimg={this.setimg} state={this.state}/>
-        <BucketContainer item={this.state.item} resetChange={() =>this.resetChange}  change={this.state.change} state={this.state.state} changeTotal={this.state.changeTotal} returnValue={this.state.returnChangeValue}/>
+        <BucketContainer state={this.state} resetChange={() =>this.resetChange}/>
       </div>
     );
   }
