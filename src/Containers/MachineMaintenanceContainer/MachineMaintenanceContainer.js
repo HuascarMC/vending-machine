@@ -13,21 +13,21 @@ class MachineMaintenanceContainer extends React.Component {
   render() {
     return(
       <div className="maintenance">
-        <div className="stock">
-          <ul>
-            <li className="stock">COKE</li>
-            <li className="stock">PEPSI</li>
-            <li className="stock">SODA</li>
-            <li className="stock">WATER</li>
+        <div className="stock ">
+          <ul className="stock item-main">
+            <li className="stock-item">COKE</li>
+            <li className="stock-item">PEPSI</li>
+            <li className="stock-item">SODA</li>
+            <li className="stock-item">WATER</li>
           </ul>
         </div>
         <div className="stock">
-          <ul>
-            <li className="stock">DOLLAR</li>
-            <li className="stock">QUARTER</li>
-            <li className="stock">DIME</li>
-            <li className="stock">NICKEL</li>
-            <li className="stock">PENNY</li>
+          <ul className="stock coin-main">
+            <li className="stock-item">DOLLAR</li>
+            <li className="stock-item">QUARTER</li>
+            <li className="stock-item">DIME</li>
+            <li className="stock-item">NICKEL</li>
+            <li className="stock-item">PENNY</li>
           </ul>
         </div>
       </div>

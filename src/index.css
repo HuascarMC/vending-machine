@@ -11,6 +11,26 @@ button {
   margin-left: 50px;
 }
 
+.stock-item {
+	margin: 4px;
+	text-align: left;
+	margin: 7px 1px 13px 1px;
+	padding-left: 8px;
+}
+
+.stock {
+		background-color: rgb(37, 37, 37);
+	position: relative;
+	width: 100%;
+	text-align: left;
+	color: white;
+	padding-left: 0;
+	margin-bottom: 13px;
+	padding: 10px;
+		border-radius: 10px;
+		perspective: 300px;
+}
+
 .maintenance {
 	position: absolute;
 	margin-top: 13%;
@@ -18,9 +38,7 @@ button {
 	top: 60px;
 	height: 520px;
 	width: 190px;
-	background-color: rgb(37, 37, 37);
-	border-radius: 10px;
-	perspective: 300px;
+
 }
 
 .bucket {
