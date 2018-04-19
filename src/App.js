@@ -15,7 +15,6 @@ class App extends Component {
       imgsrc: undefined
     }
     this.setResponse = this.setResponse.bind(this)
-    this.resetChange = this.resetChange.bind(this)
     this.setChange = this.setChange.bind(this)
     this.setimg = this.setimg.bind(this)
     this.setImage = this.setImage.bind(this)
@@ -42,6 +41,14 @@ setImage() {
   this.setimg(undefined)
 }
 
+setimg(src) {
+  if(src !== this.state.imgsrc) {
+    this.setState({
+      imgsrc: src
+    })
+  }
+  console.log(src);
+}
 
 setChange(amount) {
   this.setState({
@@ -58,15 +65,6 @@ setResponse(data) {
       changeTotal: data.data.fourth.toFixed(2)
     })
   }
-}
-
-setimg(src) {
-  if(src !== this.state.imgsrc) {
-  this.setState({
-    imgsrc: src
-  })
-}
-  console.log(src);
 }
 
   render() {

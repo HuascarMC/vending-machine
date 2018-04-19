@@ -175,7 +175,6 @@ updateBalance(balance) {
       <div className="machine">
           <InputContainer updateBalance={this.updateBalance.bind(this)} pushReturn={this.pushReturn.bind(this)} pushOrder={this.pushOrder.bind(this)} balance={this.state.balance}/>
           <DisplayContainer updateItem={this.updateItem.bind(this)} />
-
       </div>
     </div>
     )
