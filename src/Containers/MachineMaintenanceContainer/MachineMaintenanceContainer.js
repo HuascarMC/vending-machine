@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 class MachineMaintenanceContainer extends React.Component {
   constructor(props) {
@@ -14,11 +15,31 @@ class MachineMaintenanceContainer extends React.Component {
       NICKEL: 0,
       PENNY: 0
     }
+    this.getItems = this.getItems.bind(this);
   }
+
+
+getItems() {
+    axios.get('http://localhost:4567/machine/items', JSON.stringify({item: this.state.item, balance: this.state.balance}))
+   .then((response) => {
+     this.setItemsQuantity(response.data)
+   })
+   .catch(function (error) {
+     console.log(error);
+   })
+}
+
+// setItemsQuantity(data) {
+//   this.setState({
+//     COKE: coke,
+//
+//   })
+// }
 
 
 
   render() {
+    this.getItems()
     return(
       <div className="maintenance">
         <div className="stock ">
