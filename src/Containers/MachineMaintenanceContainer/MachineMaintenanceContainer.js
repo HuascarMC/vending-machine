@@ -15,19 +15,19 @@ class MachineMaintenanceContainer extends React.Component {
       <div className="maintenance">
         <div className="stock ">
           <ul className="stock item-main">
-            <li className="stock-item">COKE</li>
-            <li className="stock-item">PEPSI</li>
-            <li className="stock-item">SODA</li>
-            <li className="stock-item">WATER</li>
+            <li className="stock-item">COKE<button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">PEPS<button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">SODA<button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">WATE<button className="plus">+</button><button className="minus">-</button></li>
           </ul>
         </div>
         <div className="stock">
           <ul className="stock coin-main">
-            <li className="stock-item">DOLLAR</li>
-            <li className="stock-item">QUARTER</li>
-            <li className="stock-item">DIME</li>
-            <li className="stock-item">NICKEL</li>
-            <li className="stock-item">PENNY</li>
+            <li className="stock-item">DOLL<button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">QUAR<button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">DIME<button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">NICK<button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">PENN<button className="plus">+</button><button className="minus">-</button></li>
           </ul>
         </div>
       </div>
