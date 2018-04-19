@@ -28,7 +28,6 @@ resetChange() {
 }
 
 componentDidUpdate() {
-  console.log("lol");
   this.setImage()
 }
 
@@ -45,8 +44,8 @@ setImage() {
       case "WATER":
       return this.setimg("http://www.pngall.com/wp-content/uploads/2016/04/Water-Bottle-PNG-Picture.png")
     }
-    this.setimg(0)
   }
+  this.setimg(undefined)
 }
 
 
@@ -79,6 +78,7 @@ setimg(src) {
   render() {
     return (
       <div className="App">
+        <p className="img-title">YOUR ORDER HERE:</p>
         <div className="img-container">
           <img src={this.state.imgsrc}/>
         </div>

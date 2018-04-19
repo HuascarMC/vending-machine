@@ -2,6 +2,7 @@ import React from 'react';
 import InputContainer from '../InputContainer/InputContainer.js'
 import DisplayContainer from '../DisplayContainer/DisplayContainer.js'
 import axios from 'axios';
+import MachineMaintenanceContainer from '../MachineMaintenanceContainer/MachineMaintenanceContainer.js'
 
 class MachineContainer extends React.Component {
   constructor(props) {
@@ -9,12 +10,117 @@ class MachineContainer extends React.Component {
     this.state = {
       item: "none",
       balance: 0.00,
+      COKE: 0,
+      PEPSI: 0,
+      SODA: 0,
+      WATER: 0,
+      DOLLAR: 0,
+      QUARTER: 0,
+      DIME: 0,
+      NICKEL: 0,
+      PENNY: 0
     }
     this.pushOrder = this.pushOrder.bind(this);
     this.tryOrder = this.tryOrder.bind(this);
+    this.getItems = this.getItems.bind(this);
+    this.getCoins = this.getCoins.bind(this);
+    this.increaseCoinQuantity = this.increaseCoinQuantity.bind(this);
+    this.increaseItemQuantity = this.increaseItemQuantity.bind(this);
+    this.reduceCoinQuantity = this.reduceCoinQuantity.bind(this);
+    this.reduceItemQuantity = this.reduceItemQuantity.bind(this);
+}
+componentDidMount() {
+  this.getItems();
+  this.getCoins();
+}
+getItems = () => {
+    axios.get('http://localhost:4567/machine/items', { crossdomain: true })
+   .then((response) => {
+     console.log(response);
+     this.setItemsQuantity(response.data)
+   })
+   .catch(function (error) {
+     console.log(error);
+   })
 }
 
+getCoins = () => {
+  axios.get('http://localhost:4567/machine/coins', { crossdomain: true})
+  .then((response) => {
+    console.log(response);
+    this.setCoinsQuantity(response.data)
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+}
 
+setItemsQuantity(data) {
+  this.setState({
+    COKE: data[3].quantity,
+    PEPSI: data[2].quantity,
+    SODA: data[1].quantity,
+    WATER: data[0].quantity
+  })
+}
+
+setCoinsQuantity(data) {
+  this.setState({
+    DOLLAR: data[0].quantity,
+    QUARTER: data[1].quantity,
+    DIME: data[2].quantity,
+    NICKEL: data[4].quantity,
+    PENNY: data[3].quantity
+  })
+}
+
+increaseItemQuantity(item) {
+  axios.put(`http://localhost:4567/machine/additem/${item}`, { crossdomain: true})
+  .then((response) => {
+    console.log(response);
+    this.getItems();
+    this.getCoins();
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+}
+
+increaseCoinQuantity(coin) {
+  axios.put(`http://localhost:4567/machine/addcoin/${coin}`, { crossdomain: true})
+  .then((response) => {
+    console.log(response);
+    this.getItems();
+    this.getCoins();
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+}
+
+reduceItemQuantity(item) {
+  axios.put(`http://localhost:4567/machine/removeitem/${item}`, { crossdomain: true})
+  .then((response) => {
+    console.log(response);
+    this.getItems();
+    this.getCoins();
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+}
+
+reduceCoinQuantity(coin) {
+  axios.put(`http://localhost:4567/machine/removecoin/${coin}`, { crossdomain: true})
+  .then((response) => {
+    console.log(response);
+    this.getItems();
+    this.getCoins();
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+}
 
 pushReturn() {
   this.props.setChange(this.state.balance)
@@ -23,6 +129,8 @@ pushReturn() {
 
 pushOrder() {
   this.tryOrder();
+  this.getItems();
+  this.getCoins();
 }
 
 tryOrder() {
@@ -59,6 +167,7 @@ updateBalance(balance) {
   render() {
     return(
       <div>
+        <MachineMaintenanceContainer state={this.state} increaseCoinQuantity={this.increaseCoinQuantity} increaseItemQuantity={this.increaseItemQuantity} reduceCoinQuantity={this.reduceCoinQuantity} reduceItemQuantity={this.reduceItemQuantity} getItems={this.getItems} getCoins={this.getCoins}/>
         <p className="title">Your choice</p>
       <div className="choice" >{this.state.item}</div>
       <p className="title">Your balance:</p>

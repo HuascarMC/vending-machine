@@ -7,9 +7,9 @@ class DisplayContainer extends React.Component {
   this.state = {
     selection: ""
   }
-  // this.updateItem = this.updateItem.bind(this)
+
 }
-// Updates the number property in state when input value changes.
+
 setSelection(choice) {
   this.setState({
     selection: choice
@@ -22,7 +22,6 @@ updateItem(choice) {
 }
 
  render() {
- // Renders a form to get user input and passes the value of state to props table container.
 
   return(
 
