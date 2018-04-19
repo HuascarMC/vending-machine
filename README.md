@@ -1,17 +1,19 @@
 ## What is it
 
-*UNDER CONSTRUCTION*
-
-This is the client side of a project that is currently being developed.
-
 It simulates the usage of a vending machine but doesn't handle any of the logic. It works by making
-requests on a RESTful API that runs on the server side.
+requests on a RESTful API that runs on the server side, click [!here](https://github.com/HuascarMC/vending-machine-server).
 
 Based on the response it renders what's necessary to simulate the operation of a vending machine.
 
+The stack:
+
+- ReactJS
+- Airbnb's enzyme
+- AXIOS
+
 # NOTE:
 The server currently runs locally so running this by itself will only render the looks without any functionality.
-Setup the [server-repo](https://github.com/HuascarMC/vending-machine-rest-api) too for functionality.
+Setup the [server-repo](https://github.com/HuascarMC/vending-machine-server) for functionality.
 
 ![alt-text](/src/images/vm-example.png)
 
@@ -59,4 +61,18 @@ and pressing enter.
 
 # Things to improve/currently working on.
 
-- *A LOT*
+- All the codebase needs to be refactored, child components shouldn't inherit state.
+
+- Separation of concerns is not clear.
+
+- Rename functions and classes.
+
+- Write unit tests for containers, components, tools.
+
+- CSS needs improvement, lots of repetition when naming classes.
+
+- Current CORS issue when making requests on the API.
+
+- Clean code.
+
+- *A LOT MORE*
