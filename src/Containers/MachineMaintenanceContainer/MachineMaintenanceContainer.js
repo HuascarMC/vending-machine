@@ -16,8 +16,15 @@ class MachineMaintenanceContainer extends React.Component {
       PENNY: 0
     }
     this.getItems = this.getItems.bind(this);
+    this.getCoins = this.getCoins.bind(this);
+    this.setMaintenanceInfo = this.setMaintenanceInfo.bind(this);
   }
 
+
+setMaintenanceInfo() {
+  this.getItems();
+  this.getCoins();
+}
 
 getItems() {
     axios.get('http://localhost:4567/machine/items', { crossdomain: true })
@@ -27,6 +34,16 @@ getItems() {
    .catch(function (error) {
      console.log(error);
    })
+}
+
+getCoins() {
+  axios.get('http://localhost:4567/machine/coins', { crossdomain: true})
+  .then((response) => {
+    this.setCoinsQuantity(response.data)
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
 }
 
 setItemsQuantity(data) {
@@ -51,23 +68,24 @@ setCoinsQuantity(data) {
 
 
   render() {
+    this.setMaintenanceInfo();
     return(
       <div className="maintenance">
         <div className="stock ">
           <ul className="stock item-main">
-            <li className="stock-item">COKE <p className="quantity">{this.state.COKE}</p><button className="plus">+</button><button className="minus">-</button></li>
-            <li className="stock-item">PEPS <p className="quantity">{this.state.PEPSI}</p><button className="plus">+</button><button className="minus">-</button></li>
-            <li className="stock-item">SODA <p className="quantity">{this.state.SODA}</p><button className="plus">+</button><button className="minus">-</button></li>
-            <li className="stock-item">WATE <p className="quantity">{this.state.WATER}</p><button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">COKE <p className="quantity">{this.state.COKE}</p><button className="plus">+</button><button onClick={this.reduceQuantity("coke")}className="minus">-</button></li>
+            <li className="stock-item">PEPS <p className="quantity">{this.state.PEPSI}</p><button className="plus">+</button><button onClick={this.reduceQuantity("pepsi")}className="minus">-</button></li>
+            <li className="stock-item">SODA <p className="quantity">{this.state.SODA}</p><button className="plus">+</button><button onClick={this.reduceQuantity("soda")}className="minus">-</button></li>
+            <li className="stock-item">WATE <p className="quantity">{this.state.WATER}</p><button className="plus">+</button><button onClick={this.reduceQuantity("water")}className="minus">-</button></li>
           </ul>
         </div>
         <div className="stock">
           <ul className="stock coin-main">
-            <li className="stock-item">DOLL <p className="quantity">{this.state.DOLLAR}</p><button className="plus">+</button><button className="minus">-</button></li>
-            <li className="stock-item">QUAR <p className="quantity">{this.state.QUARTER}</p><button className="plus">+</button><button className="minus">-</button></li>
-            <li className="stock-item">DIME <p className="quantity">{this.state.DIME}</p><button className="plus">+</button><button className="minus">-</button></li>
-            <li className="stock-item">NICK <p className="quantity">{this.state.NICKEL}</p><button className="plus">+</button><button className="minus">-</button></li>
-            <li className="stock-item">PENN <p className="quantity">{this.state.PENNY}</p><button className="plus">+</button><button className="minus">-</button></li>
+            <li className="stock-item">DOLL <p className="quantity">{this.state.DOLLAR}</p><button className="plus">+</button><button onClick={this.reduceQuantity("dollar")}className="minus">-</button></li>
+            <li className="stock-item">QUAR <p className="quantity">{this.state.QUARTER}</p><button className="plus">+</button><button onClick={this.reduceQuantity("quarter")}className="minus">-</button></li>
+            <li className="stock-item">DIME <p className="quantity">{this.state.DIME}</p><button className="plus">+</button><button onClick={this.reduceQuantity("dime")}className="minus">-</button></li>
+            <li className="stock-item">NICK <p className="quantity">{this.state.NICKEL}</p><button className="plus">+</button><button onClick={this.reduceQuantity("nickel")}className="minus">-</button></li>
+            <li className="stock-item">PENN <p className="quantity">{this.state.PENNY}</p><button className="plus">+</button><button onClick={this.reduceQuantity("penny")}className="minus">-</button></li>
           </ul>
         </div>
       </div>

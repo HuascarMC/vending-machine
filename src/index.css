@@ -12,10 +12,10 @@ button {
 }
 
 .stock-item {
-	margin: 4px;
 	text-align: left;
-	margin: 7px 1px 13px 1px;
+	margin: 7px 0 13px 1px;
 	padding-left: 8px;
+	width: 150px;
 }
 
 .stock {
