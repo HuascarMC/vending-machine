@@ -59,7 +59,7 @@ and pressing enter.
 
 # Things to improve/currently working on.
 
-- ~~ Refactor, child components shouldn't have a state. ~~
+- ~~Refactor, child components shouldn't have a state~~.
 
 - State flow between components is not clear.
 
