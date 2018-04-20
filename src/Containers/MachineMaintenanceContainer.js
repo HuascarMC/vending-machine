@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemController from './ItemController'
-import CoinController from './CoinController'
+import ItemController from '../Components/ItemController'
+import CoinController from '../Components/CoinController'
 import axios from 'axios';
 
 class MachineMaintenanceContainer extends React.Component {

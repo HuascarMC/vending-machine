@@ -1,7 +1,7 @@
 import React from 'react';
-import CoinsComponent from './CoinsComponent.js'
-import BalanceDisplayComponent from './BalanceDisplayComponent.js'
-import ButtonsComponent from './ButtonsComponent.js'
+import CoinsComponent from '../Components/CoinsComponent.js'
+import BalanceDisplayComponent from '../Components/BalanceDisplayComponent.js'
+import ButtonsComponent from '../Components/ButtonsComponent.js'
 
 class InputContainer extends React.Component {
   render() {

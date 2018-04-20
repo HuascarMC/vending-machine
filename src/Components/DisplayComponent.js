@@ -1,6 +1,6 @@
 import React from 'react';
 
-class DisplayContainer extends React.Component {
+class DisplayComponent extends React.Component {
   render() {
     return(
       <div className="display">
@@ -15,4 +15,4 @@ class DisplayContainer extends React.Component {
   }
 }
 
-export default DisplayContainer;
+export default DisplayComponent;
