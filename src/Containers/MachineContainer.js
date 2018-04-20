@@ -58,10 +58,10 @@ getCoins = () => {
 
 setItemsQuantity(data) {
   this.setState({
-    COKE: data[3].quantity,
-    PEPSI: data[2].quantity,
-    SODA: data[1].quantity,
-    WATER: data[0].quantity
+    COKE: data[0].quantity,
+    PEPSI: data[1].quantity,
+    SODA: data[2].quantity,
+    WATER: data[3].quantity
   })
 }
 
@@ -70,8 +70,8 @@ setCoinsQuantity(data) {
     DOLLAR: data[0].quantity,
     QUARTER: data[1].quantity,
     DIME: data[2].quantity,
-    NICKEL: data[4].quantity,
-    PENNY: data[3].quantity
+    NICKEL: data[3].quantity,
+    PENNY: data[4].quantity
   })
 }
 
