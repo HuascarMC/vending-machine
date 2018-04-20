@@ -13,7 +13,7 @@ The stack:
 The server currently runs locally so running this by itself will only render the looks without any functionality.
 Setup the [server-repo](https://github.com/HuascarMC/vending-machine-server) for functionality.
 
-![alt-text](/src/images/vm-example.png)
+![alt-text](/public/images/vm-example.png)
 
 Video doesn't show updated UI. Click [here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
 
