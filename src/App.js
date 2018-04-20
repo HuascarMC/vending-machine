@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MachineContainer from './Containers/Machine/MachineContainer.js'
-import BucketContainer from './Containers/BucketContainer/BucketContainer.js'
+import MachineContainer from './Containers/MachineContainer.js'
+import BucketContainer from './Containers/BucketContainer.js'
 import './App.css';
 
 
@@ -15,16 +15,9 @@ class App extends Component {
       imgsrc: undefined
     }
     this.setResponse = this.setResponse.bind(this)
-    this.resetChange = this.resetChange.bind(this)
     this.setChange = this.setChange.bind(this)
     this.setimg = this.setimg.bind(this)
     this.setImage = this.setImage.bind(this)
-}
-
-resetChange() {
-  this.setState({
-    change: 0
-  })
 }
 
 componentDidUpdate() {
@@ -48,6 +41,14 @@ setImage() {
   this.setimg(undefined)
 }
 
+setimg(src) {
+  if(src !== this.state.imgsrc) {
+    this.setState({
+      imgsrc: src
+    })
+  }
+  console.log(src);
+}
 
 setChange(amount) {
   this.setState({
@@ -66,15 +67,6 @@ setResponse(data) {
   }
 }
 
-setimg(src) {
-  if(src !== this.state.imgsrc) {
-  this.setState({
-    imgsrc: src
-  })
-}
-  console.log(src);
-}
-
   render() {
     return (
       <div className="App">
@@ -83,7 +75,7 @@ setimg(src) {
           <img src={this.state.imgsrc}/>
         </div>
         <MachineContainer setResponse={this.setResponse} setChange={this.setChange} setimg={this.setimg} state={this.state}/>
-        <BucketContainer item={this.state.item} resetChange={() =>this.resetChange}  change={this.state.change} state={this.state.state} changeTotal={this.state.changeTotal} returnValue={this.state.returnChangeValue}/>
+        <BucketContainer state={this.state} setChange={() =>this.setChange}/>
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React from 'react';
-import InputContainer from '../InputContainer/InputContainer.js'
-import DisplayContainer from '../DisplayContainer/DisplayContainer.js'
+import InputContainer from './InputContainer.js'
+import DisplayComponent from '../Components/DisplayComponent.js'
+import MachineMaintenanceContainer from './MachineMaintenanceContainer.js'
+import OrderDisplayComponent from '../Components/OrderDisplayComponent.js'
 import axios from 'axios';
-import MachineMaintenanceContainer from '../MachineMaintenanceContainer/MachineMaintenanceContainer.js'
 
 class MachineContainer extends React.Component {
   constructor(props) {
@@ -168,14 +169,10 @@ updateBalance(balance) {
     return(
       <div>
         <MachineMaintenanceContainer state={this.state} increaseCoinQuantity={this.increaseCoinQuantity} increaseItemQuantity={this.increaseItemQuantity} reduceCoinQuantity={this.reduceCoinQuantity} reduceItemQuantity={this.reduceItemQuantity} getItems={this.getItems} getCoins={this.getCoins}/>
-        <p className="title">Your choice</p>
-      <div className="choice" >{this.state.item}</div>
-      <p className="title">Your balance:</p>
-      <div className="choice" >{this.state.balance.toFixed(2)}</div>
+        <OrderDisplayComponent state={this.state} />
       <div className="machine">
           <InputContainer updateBalance={this.updateBalance.bind(this)} pushReturn={this.pushReturn.bind(this)} pushOrder={this.pushOrder.bind(this)} balance={this.state.balance}/>
-          <DisplayContainer updateItem={this.updateItem.bind(this)} />
-
+          <DisplayComponent updateItem={this.updateItem.bind(this)} />
       </div>
     </div>
     )

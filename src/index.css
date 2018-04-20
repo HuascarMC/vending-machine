@@ -234,14 +234,14 @@ img {
 	border-style: groove;
   perspective: 300px;
 }
-.get-balance-form {
+/* .get-balance-form {
   position: absolute;
   bottom: 0;
   left: 50%;
 
   margin: -70px 0 0 -170px;
   background-color: rgb(247, 184, 89);
-}
+} */
 
 
 .push {
@@ -263,11 +263,11 @@ img {
     padding: 7px 15px 7px 17px;
     border: solid #1f628d 8px;
     text-decoration: none;
-    margin-bottom: 30px;
-    text-align: center;
-    margin-left: 280%;
-    margin-bottom: 135%;
     outline: none;
+		position: absolute;
+		right: 11%;
+		bottom: 18%;
+
 }
 
 .return {
