@@ -1,9 +1,7 @@
 ## What is it
 
-It simulates the usage of a vending machine but doesn't handle any of the logic. It works by making
-requests on a RESTful API that runs on the server side, click [!here](https://github.com/HuascarMC/vending-machine-server).
-
-Based on the response it renders what's necessary to simulate the operation of a vending machine.
+React UI that simulates the usage of a vending machine, it reacts to the response of
+requests made on a RESTful API that runs on the server side, click [!here](https://github.com/HuascarMC/vending-machine-server).
 
 The stack:
 
@@ -17,7 +15,7 @@ Setup the [server-repo](https://github.com/HuascarMC/vending-machine-server) for
 
 ![alt-text](/src/images/vm-example.png)
 
-Click [here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
+Video doesn't show updated UI. Click [here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
 
 
 ## How to run
@@ -61,11 +59,15 @@ and pressing enter.
 
 # Things to improve/currently working on.
 
-- All the codebase needs to be refactored, child components shouldn't inherit state.
+- ~~ Refactor, child components shouldn't have a state. ~~
+
+- State flow between components is not clear.
+
+- Occasional issue rendering change.
 
 - Separation of concerns is not clear.
 
-- Rename functions and classes.
+- Rename functions, erase repetition.
 
 - Write unit tests for containers, components, tools.
 
@@ -75,4 +77,4 @@ and pressing enter.
 
 - Clean code.
 
-- *A LOT MORE*
+- *MORE*
