@@ -4,7 +4,7 @@ class TransactionStateComponent extends React.Component {
   render() {
     return(
       <div className="transaction-state-container">
-        <p className="title-transaction-state">Transaction State: </p>
+        <p className="title-transaction-state">transaction state </p>
         <div className="transaction-state">
           <p className="state-title">In Stock: {JSON.stringify(this.props.state.state.stockInventoryState) } </p>
           <p className="state-title">Enough change: {JSON.stringify(this.props.state.state.coinInventoryState) } </p>

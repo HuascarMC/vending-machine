@@ -4,7 +4,7 @@ class ChangeComponent extends React.Component {
   render() {
     return(
       <div>
-        <p className="title-total-change">Change Total: </p>
+        <p className="title-total-change">change </p>
         <div className="changeTotal">
           <p className="balance-text">${ this.props.state.changeTotal }</p>
         </div>

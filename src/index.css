@@ -53,17 +53,28 @@ button {
 }
 
 .title-total-change {
-  margin: 0 0 0 56% !important;
+  margin: -2% 0 0 70% !important;
   font-size: 30px;
+  position: absolute;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+   line-height: 1;
 }
 
 .transaction-state-container {
-  margin-top: 20%;
+  margin-top: 16%;
 }
 
 .title-transaction-state {
-  margin: -4% 73% 0 0 !important;
+  margin: -2% 0% 0 7% !important;
   font-size: 30px;
+  position: absolute;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0px;
+   line-height: 1;
+    text-align: center;
 }
 
 .changeTotal {
@@ -71,12 +82,11 @@ button {
   width: 120px;
   background-color: rgb(37, 37, 37);
   border-radius: 20px;
-  margin-left: 70%;
   -webkit-border-radius: 13;
   -moz-border-radius: 13;
   border-radius: 13px;
    border: solid #c2c2c2 4px;
-   margin: 0 0 0 75%;
+   margin: 4% 0 0 70%;
      color: rgb(163, 210, 3);
      font-size: 33;
 }
@@ -177,13 +187,18 @@ font-size: 20px;
 
 .title {
   margin: 1% 0 0 0 !important;
-  font-size: 40px;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0px;
+   line-height: 1.2;
+    text-align: center;
 }
 
 .bucket {
   position: absolute;
-  margin-top: 17%;
-  margin-left: 6%;
+  margin-top: 16%;
+  margin-left: 1%;
   top: 60px;
   left: 65%;
   height: 520px;
@@ -205,15 +220,22 @@ font-size: 20px;
 }
 
 .img-title {
-	font-size: 20px;
-	margin-right: 73%;
+  position: absolute;
+	font-size: 30px;
+  margin-top: 13%;
+	margin-left: 11%;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+   line-height: 1;
+    text-align: center;
 }
 
 .img-container {
 		position: absolute;
     height: 300px;
     width: 300px;
-		margin-top: 1%;
+		margin-top: 15%;
 		margin-left: 6%;
 		background-color: rgb(37, 37, 37);
 		border-radius: 10px;

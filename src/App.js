@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MachineContainer from './Containers/MachineContainer.js'
 import BucketContainer from './Containers/BucketContainer.js'
+import LogoRefs from './Components/Misc/LogoRefs.js'
 import './App.css';
 
 
@@ -69,14 +70,17 @@ setResponse(data) {
 
   render() {
     return (
+    <div>
       <div className="App">
-        <p className="img-title">YOUR ORDER HERE:</p>
+        <LogoRefs />;
+        <p className="img-title">bucket</p>
         <div className="img-container">
           <img src={this.state.imgsrc}/>
         </div>
         <MachineContainer setResponse={this.setResponse} setChange={this.setChange} setimg={this.setimg} state={this.state}/>
         <BucketContainer state={this.state} setChange={() =>this.setChange}/>
       </div>
+    </div>
     );
   }
 }
