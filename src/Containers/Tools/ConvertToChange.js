@@ -1,4 +1,4 @@
-var ConvertToChange = function(a) {
+var convertToChange = function(a) {
   var result = []
 
     while(a > 0.00) {
@@ -26,4 +26,4 @@ var ConvertToChange = function(a) {
   return result;
 }
 
-module.exports = ConvertToChange;
+module.exports = convertToChange;

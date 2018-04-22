@@ -1,7 +1,7 @@
 import React from 'react';
 import TransactionStateComponent from '../Components/TransactionStateComponent'
 import ChangeComponent from '../Components/ChangeComponent'
-import ConvertToChange from '../Tools/ConvertToChange.js'
+import convertToChange from './Tools/ConvertToChange.js'
 
 class BucketContainer extends React.Component {
 
@@ -40,7 +40,7 @@ class BucketContainer extends React.Component {
   render() {
     var change;
     if ((typeof this.props.state.change) == "number") {
-      change = this.generateChange(ConvertToChange(this.props.state.change))
+      change = this.generateChange(convertToChange(this.props.state.change))
     } else {
       change = this.generateChange(this.props.state.change)
     }
