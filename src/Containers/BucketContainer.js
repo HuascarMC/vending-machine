@@ -40,7 +40,7 @@ class BucketContainer extends React.Component {
   render() {
     var change;
     if ((typeof this.props.state.change) == "number") {
-      change = this.generateChange(convertToChange(this.props.state.change))
+      change = this.generateChange(ConvertToChange(this.props.state.change))
     } else {
       change = this.generateChange(this.props.state.change)
     }
