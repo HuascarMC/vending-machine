@@ -35,7 +35,7 @@ componentDidMount() {
   this.getCoins();
 }
 getItems = () => {
-    axios.get('https://vending-machine-server.herokuapp.com/machine/items', { crossdomain: true })
+    axios.get('https://localhost:4567/machine/items', { crossdomain: true })
    .then((response) => {
      console.log(response);
      this.setItemsQuantity(response.data)
@@ -46,7 +46,7 @@ getItems = () => {
 }
 
 getCoins = () => {
-  axios.get('https://vending-machine-server.herokuapp.com/machine/coins', { crossdomain: true})
+  axios.get('https://localhost:4567/machine/coins', { crossdomain: true})
   .then((response) => {
     console.log(response);
     this.setCoinsQuantity(response.data)
@@ -76,7 +76,7 @@ setCoinsQuantity(data) {
 }
 
 increaseItemQuantity(item) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/additem/${item}`, { crossdomain: true})
+  axios.put(`https://localhost:4567/machine/additem/${item}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
     this.getItems();
@@ -88,7 +88,7 @@ increaseItemQuantity(item) {
 }
 
 increaseCoinQuantity(coin) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/addcoin/${coin}`, { crossdomain: true})
+  axios.put(`https://localhost:4567/machine/addcoin/${coin}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
     this.getItems();
@@ -100,7 +100,7 @@ increaseCoinQuantity(coin) {
 }
 
 reduceItemQuantity(item) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/removeitem/${item}`, { crossdomain: true})
+  axios.put(`https://localhost:4567/machine/removeitem/${item}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
     this.getItems();
@@ -112,7 +112,7 @@ reduceItemQuantity(item) {
 }
 
 reduceCoinQuantity(coin) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/removecoin/${coin}`, { crossdomain: true})
+  axios.put(`https://localhost:4567/machine/removecoin/${coin}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
     this.getItems();
@@ -135,7 +135,7 @@ pushOrder() {
 }
 
 tryOrder() {
-  axios.post('https://vending-machine-server.herokuapp.com/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
+  axios.post('https://localhost:4567/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
  .then((response) => {
    // console.log(response);
    this.props.setResponse(response)
