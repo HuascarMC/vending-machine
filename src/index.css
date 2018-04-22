@@ -63,7 +63,7 @@ button {
 }
 
 .transaction-state-container {
-  margin-top: 15%;
+  margin-top: 16%;
 }
 
 .title-transaction-state {
@@ -86,7 +86,7 @@ button {
   -moz-border-radius: 13;
   border-radius: 13px;
    border: solid #c2c2c2 4px;
-   margin: 6% 0 0 70%;
+   margin: 4% 0 0 70%;
      color: rgb(163, 210, 3);
      font-size: 33;
 }

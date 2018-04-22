@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MachineContainer from './Containers/MachineContainer.js'
 import BucketContainer from './Containers/BucketContainer.js'
+import LogoRefs from './Components/Misc/LogoRefs.js'
 import './App.css';
 
 
@@ -69,8 +70,9 @@ setResponse(data) {
 
   render() {
     return (
+    <div>
       <div className="App">
-        <a href='https://github.com/HuascarMC/vending-machine-server/tree/heroku-deploy' target="_blank"><img src='/images/github-logo.png' style={{height:'50px', position:'absolute', margin:'1% 0 0 45%' }}/></a>
+        <LogoRefs />;
         <p className="img-title">bucket</p>
         <div className="img-container">
           <img src={this.state.imgsrc}/>
@@ -78,6 +80,7 @@ setResponse(data) {
         <MachineContainer setResponse={this.setResponse} setChange={this.setChange} setimg={this.setimg} state={this.state}/>
         <BucketContainer state={this.state} setChange={() =>this.setChange}/>
       </div>
+    </div>
     );
   }
 }
