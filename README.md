@@ -1,7 +1,8 @@
 ## What is it
 
 React UI that simulates the usage of a vending machine, it reacts to the response of
-requests made on a RESTful API that runs on the server side, click [!here](https://github.com/HuascarMC/vending-machine-server).
+requests made on a RESTful API that runs on the server side, click [here](https://github.com/HuascarMC/vending-machine-server)
+to see the server's repo.
 
 The stack:
 
