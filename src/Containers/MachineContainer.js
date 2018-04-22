@@ -76,7 +76,7 @@ setCoinsQuantity(data) {
 }
 
 increaseItemQuantity(item) {
-  axios.put(`http://localhost:4567/machine/additem/${item}`, { crossdomain: true})
+  axios.put(`https://vending-machine-server.herokuapp.com/machine/additem/${item}`, { crossdomain: true})
   .then((response) => {
     console.log(response);
     this.getItems();
