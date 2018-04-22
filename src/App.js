@@ -70,7 +70,8 @@ setResponse(data) {
   render() {
     return (
       <div className="App">
-        <p className="img-title">YOUR ORDER HERE:</p>
+        <a href='https://github.com/HuascarMC/vending-machine-server/tree/heroku-deploy' target="_blank"><img src='/images/github-logo.png' style={{height:'50px', position:'absolute', margin:'1% 0 0 45%' }}/></a>
+        <p className="img-title">bucket</p>
         <div className="img-container">
           <img src={this.state.imgsrc}/>
         </div>
