@@ -1,6 +1,5 @@
 ## What is it
 
-![alt-text](/public/images/vm-screenshot.png)
 
 React UI that simulates the usage of a vending machine, it reacts to the response of
 requests that are triggered by the user on a RESTful API that runs on the server side, click [here](https://github.com/HuascarMC/vending-machine-server)
@@ -17,9 +16,13 @@ The stack:
 
 *Improving* The project is currently running on the cloud, it may take a while to load as Heroku puts the dynos to sleep when inactive. One is able to launch both the server and the client by just clicking [here](https://vending-machine-server.herokuapp.com) and following the instructions. If it doesn't load quickly, leave it for a while and then refresh. Try not to make too many requests at once as it can crash the server and it will need to be re-deployed.
 
+![alt-text](/public/images/vm-screenshot.png)
+
+Video doesn't show updated UI. Click [here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
+
 ## How to run
 
-# NOTE:
+## NOTE:
 In case you would like to run it locally it will be required to clone this repo's branch 'local'. This branch just changes the remote routes where the requests are made to the local ones.
 
 *Example*
@@ -32,7 +35,6 @@ It will use:
 /POST http://localhost:4567/order
 ```
 
-Video doesn't show updated UI. Click [here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
 
 - Clone this repo's LOCAL branch into your local machine.
 ```
