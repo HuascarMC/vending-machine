@@ -1,7 +1,7 @@
 import React from 'react';
 import TransactionStateComponent from '../Components/TransactionStateComponent'
 import ChangeComponent from '../Components/ChangeComponent'
-var convertToChange = require('../Tools/ConvertToChange');
+var convertToChange = require('../Tools/ConvertToChange.js');
 
 class BucketContainer extends React.Component {
 
