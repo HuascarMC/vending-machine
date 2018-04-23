@@ -1,6 +1,5 @@
 ## What is it
 
-
 React UI that simulates the usage of a vending machine, it reacts to the response of
 requests that are triggered by the user on a RESTful API that runs on the server side, click [here](https://github.com/HuascarMC/vending-machine-server)
 to see the server repo.
@@ -14,7 +13,7 @@ The stack:
 - Airbnb's enzyme
 - AXIOS
 
-*Improving* The project is currently running on the cloud, it may take a while to load as Heroku puts the dynos to sleep when inactive. One is able to launch both the server and the client by just clicking [here](https://vending-machine-server.herokuapp.com) and following the instructions. If it doesn't load quickly, leave it for a while and then refresh. Try not to make too many requests at once as it can crash the server and it will need to be re-deployed.
+**Improving** The project is currently running on the cloud, it may take a while to load as Heroku puts the dynos to sleep when inactive. Heroku doesn't render css well but one is able to launch both the server and the client by just clicking [here](https://vending-machine-server.herokuapp.com) and following the instructions. If it doesn't load quickly, leave it for a while and then refresh. Try not to make too many requests at once as it can crash the server and it will need to be re-deployed.
 
 ![alt-text](/public/images/vm-screenshot.png)
 
