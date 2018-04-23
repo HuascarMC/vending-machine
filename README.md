@@ -13,7 +13,7 @@ The stack:
 - Airbnb's enzyme
 - AXIOS
 
-**Improving** The project is currently running on the cloud, it may take a while to load as Heroku puts the dynos to sleep when inactive. Heroku doesn't render css well but one is able to launch both the server and the client by just clicking [here](https://vending-machine-server.herokuapp.com) and following the instructions. If it doesn't load quickly, leave it for a while and then refresh. Try not to make too many requests at once as it can crash the server and it will need to be re-deployed.
+**Improving** The project is currently running on the cloud, it may take a while to load as Heroku puts the dynos to sleep when inactive. Heroku is not rendering css well but one is able to launch both the server and the client by just clicking [here](https://vending-machine-server.herokuapp.com) and following the instructions. If it doesn't load quickly, leave it for a while and then refresh. Try not to make too many requests at once as it can crash the server and it will need to be re-deployed.
 
 ![alt-text](/public/images/vm-screenshot.png)
 
