@@ -1,3 +1,7 @@
+# Running on the cloud with AWS
+
+## Click [here](https://vending-machine-server.herokuapp.com).
+
 ## What is it
 
 React UI that simulates the usage of a vending machine, it reacts to the response of
