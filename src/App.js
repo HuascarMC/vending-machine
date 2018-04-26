@@ -73,10 +73,6 @@ setResponse(data) {
     <div>
       <div className="App">
         <LogoRefs />;
-        <p className="img-title">bucket</p>
-        <div className="img-container">
-          <img src={this.state.imgsrc}/>
-        </div>
         <MachineContainer setResponse={this.setResponse} setChange={this.setChange} setimg={this.setimg} state={this.state}/>
         <BucketContainer state={this.state} setChange={() =>this.setChange}/>
       </div>
