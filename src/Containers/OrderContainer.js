@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemComponent from '../Components/ItemComponent'
 
 class OrderContainer extends React.Component {
 
@@ -6,7 +7,7 @@ class OrderContainer extends React.Component {
   render() {
     return(
       <div className="order-wrapper">
-        asdfad
+        <ItemComponent />
       </div>
     );
   }
