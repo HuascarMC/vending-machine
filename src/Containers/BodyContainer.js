@@ -1,5 +1,6 @@
 import React from 'react';
 import OrderContainer from './OrderContainer'
+import MaintenanceContainer from './MaintenanceContainer'
 
 class BodyContainer extends React.Component {
 
@@ -8,6 +9,7 @@ class BodyContainer extends React.Component {
     return(
       <div className="content-wrapper">
         <OrderContainer />
+        <MaintenanceContainer />
       </div>
     );
   }

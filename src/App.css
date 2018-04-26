@@ -76,3 +76,9 @@ img {
   margin-top: 30%;
   background-color: blue;
 }
+
+.maintenance-wrapper {
+  overflow: auto;
+  width: 20%;
+  background-color: purple;
+}
