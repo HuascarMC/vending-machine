@@ -70,3 +70,9 @@ img {
   line-height: 1.2;
   text-align: center;
 }
+
+.state-wrapper {
+  overflow: auto;
+  margin-top: 30%;
+  background-color: blue;
+}

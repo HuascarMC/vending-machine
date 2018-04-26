@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemComponent from '../Components/ItemComponent'
+import StateComponent from '../Components/StateComponent'
 
 class OrderContainer extends React.Component {
 
@@ -8,6 +9,7 @@ class OrderContainer extends React.Component {
     return(
       <div className="order-wrapper">
         <ItemComponent />
+        <StateComponent />
       </div>
     );
   }
