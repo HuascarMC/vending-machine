@@ -41,3 +41,9 @@ img {
   background-color: green;
   display: flex;
 }
+
+.order-wrapper {
+  overflow: auto;
+  background-color: yellow;
+  width: 30%;
+}
