@@ -137,12 +137,12 @@ li {
 .machine {
     background-color: rgb(223, 160, 102);
   width: 80%;
-  height: 60%;
+  height: 70%;
   border-radius: 10%;
   flex-direction: row;
   position: relative;
   padding: 4%;
-  margin-top: 23%;
+  margin-top: 10%;
   margin-left: 1%;
 }
 
@@ -318,4 +318,22 @@ p {
   text-decoration: none;
   margin-top: 10%;
   outline: none;
+}
+
+.plus {
+  margin-left: 1%;
+  background-color: green;
+  font-family: Arial;
+  font-size: 110%;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.minus {
+  margin-right: 3%;
+  background-color: red;
+  font-family: Arial;
+  font-size: 110%;
+  border-radius: 50%;
+  text-decoration: none;
 }
