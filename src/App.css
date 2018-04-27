@@ -131,3 +131,8 @@ li {
   float: left;
   border-radius: 10%;
 }
+
+.input-wrapper {
+  overflow: auto;
+  background-color: green;
+}
