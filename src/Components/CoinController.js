@@ -27,11 +27,11 @@ class CoinController extends React.Component {
     return(
       <div className="controller-wrapper">
         <ul>
-          <li>DOLL<button onClick={() => this.increaseCoinQuantity("dollar")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("dollar")} className="minus">-</button></li>
-          <li>QUAR<button onClick={() => this.increaseCoinQuantity("quarter")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("quarter")} className="minus">-</button></li>
-          <li>DIME<button onClick={() => this.increaseCoinQuantity("dime")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("dime")} className="minus">-</button></li>
-          <li>NICK<button onClick={() => this.increaseCoinQuantity("nickel")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("nickel")} className="minus">-</button></li>
-          <li>PENN<button onClick={() => this.increaseCoinQuantity("penny")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("penny")} className="minus">-</button></li>
+          <li>DOLL { this.props.coins.dollar }<button onClick={() => this.increaseCoinQuantity("dollar")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("dollar")} className="minus">-</button></li>
+          <li>QUAR { this.props.coins.quarter }<button onClick={() => this.increaseCoinQuantity("quarter")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("quarter")} className="minus">-</button></li>
+          <li>DIME { this.props.coins.dime }<button onClick={() => this.increaseCoinQuantity("dime")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("dime")} className="minus">-</button></li>
+          <li>NICK { this.props.coins.nickel }<button onClick={() => this.increaseCoinQuantity("nickel")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("nickel")} className="minus">-</button></li>
+          <li>PENN { this.props.coins.penny }<button onClick={() => this.increaseCoinQuantity("penny")} className="plus">+</button><button onClick={()=>this.reduceCoinQuantity("penny")} className="minus">-</button></li>
         </ul>
       </div>
     );

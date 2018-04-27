@@ -1,6 +1,7 @@
 import React from 'react';
 import CoinController from '../Components/CoinController'
 import ItemController from '../Components/ItemController'
+import axios from 'axios'
 
 
 class MaintenanceContainer extends React.Component {
@@ -8,8 +9,15 @@ class MaintenanceContainer extends React.Component {
     super(props);
 
     this.state = {
-      itemsData: 0,
-      coinsData: 0
+      dollar: 0,
+      quarter: 0,
+      dime: 0,
+      nickel: 0,
+      penny: 0,
+      coke: 0,
+      pepsi: 0,
+      soda: 0,
+      water: 0
     }
   }
 
@@ -17,9 +25,7 @@ class MaintenanceContainer extends React.Component {
       axios.get('https://vending-machine-server.herokuapp.com/machine/items', { crossdomain: true })
      .then((response) => {
        console.log(response);
-       this.setState({
-         itemsData: response.data
-       })
+       this.setState({itemsData: response});
      })
      .catch(function (error) {
        console.log(error);
@@ -30,10 +36,9 @@ class MaintenanceContainer extends React.Component {
     axios.get('https://vending-machine-server.herokuapp.com/machine/coins', { crossdomain: true})
     .then((response) => {
       console.log(response);
-      this.setState({
-        itemsData: response.data
-      })
-    })
+      // this.setState({
+      //   coinsData: response.data
+      // })
     })
     .catch(function (error) {
       console.log(error);
@@ -41,10 +46,12 @@ class MaintenanceContainer extends React.Component {
   }
 
   render() {
+    this.getCoins();
+    this.getItems();
     return(
       <div className="maintenance-wrapper">
-        <CoinController />
-        <ItemController />
+        <CoinController coins={ this.state }/>
+        <ItemController items={ this.state }/>
       </div>
     );
   }

@@ -29,10 +29,10 @@ class ItemController extends React.Component {
     return(
       <div className="controller-wrapper">
         <ul>
-          <li>COKE<button onClick={()=> this.increaseItemQuantity("coke") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("coke") } className="minus">-</button></li>
-          <li>PEPSI<button onClick={()=> this.increaseItemQuantity("pepsi") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("pepsi") } className="minus">-</button></li>
-          <li>SODA<button onClick={()=> this.increaseItemQuantity("soda") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("soda") } className="minus">-</button></li>
-          <li>WATER<button onClick={()=> this.increaseItemQuantity("water") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("water") } className="minus">-</button></li>
+          <li>COKE  { this.props.items.coke }<button onClick={()=> this.increaseItemQuantity("coke") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("coke") } className="minus">-</button></li>
+          <li>PEPSI { this.props.items.pepsi }<button onClick={()=> this.increaseItemQuantity("pepsi") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("pepsi") } className="minus">-</button></li>
+          <li>SODA  { this.props.items.dime }<button onClick={()=> this.increaseItemQuantity("soda") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("soda") } className="minus">-</button></li>
+          <li>WATER { this.props.items.penny }<button onClick={()=> this.increaseItemQuantity("water") } className="plus">+</button><button onClick={ ()=>this.reduceItemQuantity("water") } className="minus">-</button></li>
         </ul>
       </div>
     );
