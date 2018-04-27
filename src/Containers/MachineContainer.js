@@ -1,6 +1,7 @@
 import React from 'react';
 import DisplayComponent from '../Components/DisplayComponent'
 import InputComponent from '../Components/InputComponent'
+import OrderButtonComponent from '../Components/OrderButtonComponent'
 
 class MachineContainer extends React.Component {
 
@@ -11,6 +12,7 @@ class MachineContainer extends React.Component {
         <div className="machine">
           <DisplayComponent />
           <InputComponent />
+          <OrderButtonComponent />
         </div>
       </div>
     );

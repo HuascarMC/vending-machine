@@ -148,3 +148,9 @@ li {
   margin: 4%;
   padding: 0;
 }
+
+.order-button-wrapper {
+  background-color: black;
+  overflow: auto;
+  float: left;
+}
