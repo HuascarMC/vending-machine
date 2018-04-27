@@ -6,7 +6,9 @@ class MachineContainer extends React.Component {
   render() {
     return(
       <div className="machine-wrapper">
-
+        <div className="machine">
+          
+        </div>
       </div>
     );
   }
