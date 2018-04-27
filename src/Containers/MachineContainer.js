@@ -24,8 +24,8 @@ class MachineContainer extends React.Component {
       <div className="machine-wrapper">
         <div className="machine">
           <DisplayComponent />
-          <InputComponent />
-          <OrderButtonComponent />
+          <InputComponent updateBalance={ this.updateBalance().bind(this) }/>
+          <OrderButtonComponent/>
         </div>
       </div>
     );
