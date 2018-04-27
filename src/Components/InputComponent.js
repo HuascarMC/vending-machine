@@ -5,11 +5,11 @@ class InputComponent extends React.Component {
     return(
       <div className="input-wrapper">
         <ul>
-          <li><p className="coin-value">$0.01<button className="coin bronze"></button></p></li>
-          <li><p className="coin-value">$0.05<button className="coin silver"></button></p></li>
-          <li><p className="coin-value">$0.10<button className="coin silver"></button></p></li>
-          <li><p className="coin-value">$0.25<button className="coin silver"></button></p></li>
-          <li><p className="coin-value">$1.00<button className="coin gold"></button></p></li>
+          <li><p className="coinValue">$0.01<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p></li>
+          <li><p className="coinValue">$0.05<button className="coin silver" onClick={ () => this.updateBalance(0.05) }></button></p></li>
+          <li><p className="coinValue">$0.10<button className="coin silver" onClick={ () => this.updateBalance(0.10) }></button></p></li>
+          <li><p className="coinValue">$0.25<button className="coin silver" onClick={() => this.updateBalance(0.25) }></button></p></li>
+          <li><p className="coinValue">$1.00<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p></li>
         </ul>
       </div>
     );
