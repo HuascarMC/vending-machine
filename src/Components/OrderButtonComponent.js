@@ -4,8 +4,8 @@ class OrderButtonComponent extends React.Component {
   render() {
     return(
       <div className="order-button-wrapper">
-        <button className="return">RETURN</button>
-        <button className="push">PUSH</button>
+        <button className="order-button">RETURN</button>
+        <button className="order-button">PUSH</button>
       </div>
     );
   }
