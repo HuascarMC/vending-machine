@@ -272,6 +272,10 @@ p {
   outline: none;
 }
 
+.display-option:hover {
+  background-color: green;
+}
+
 .pepsi {
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
@@ -441,11 +445,11 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
 }
 
 
-.coin.bronze p{  color: rgba(223,182,103,1);}
-.coin.silver p{  color: rgba(160,160,160,1);}
-.coin.gold p{  color: rgba(242,215,50,1);}
+.coin.bronze p {  color: rgba(223,182,103,1);}
+.coin.silver p {  color: rgba(160,160,160,1);}
+.coin.gold p {  color: rgba(242,215,50,1);}
 
-.coin{
+.coin {
   cursor: pointer;
   content: "";
   width: 10px;
@@ -461,7 +465,7 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
 	/* -webkit-box-shadow: 18px 10px 10px #000000; */
 	/* -moz-box-shadow: 18px 10px 10px #000000; */
 	box-shadow: 9px -3px 5px #000000;
-  }
+}
 
 .coin:after{
   content: "";
