@@ -79,6 +79,34 @@ img {
 
 .maintenance-wrapper {
   overflow: auto;
-  width: 20%;
+  width: 10%;
   background-color: purple;
+  padding: 3%;
+  text-align: left;
+}
+
+.controller-wrapper {
+  margin-top: 20%;
+  overflow: auto;
+  width: 100%;
+  background-color: blue;
+  text-align: left;
+}
+
+.plus {
+  float: right;
+}
+
+.minus {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 4%;
 }

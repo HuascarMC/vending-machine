@@ -1,4 +1,6 @@
 import React from 'react';
+import CoinController from '../Components/CoinController'
+import ItemController from '../Components/ItemController'
 
 
 class MaintenanceContainer extends React.Component {
@@ -9,7 +11,8 @@ class MaintenanceContainer extends React.Component {
   render() {
     return(
       <div className="maintenance-wrapper">
-
+        <CoinController />
+        <ItemController />
       </div>
     );
   }
