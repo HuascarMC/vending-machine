@@ -97,13 +97,14 @@ img {
 }
 
 .controller-wrapper {
-  margin-top: 90%;
+  margin-top: 60%;
   overflow: auto;
-  width: 100%;
+  width: 90%;
   background-color: rgb(37, 37, 37);
   text-align: left;
   border-radius: 10%;
-  height: 20%;
+  height: 21%;
+  padding: 10%;
 }
 
 .plus {
@@ -163,7 +164,7 @@ background-color: rgb(37, 37, 37);
   margin: 30% 5% 0 0;
   padding: 0;
   display: inline-block;
-  background-color: rgb(37, 37, 37); 
+  background-color: rgb(37, 37, 37);
   border-radius: 20%;
 }
 
