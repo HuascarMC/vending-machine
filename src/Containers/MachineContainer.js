@@ -1,4 +1,5 @@
 import React from 'react';
+import DisplayComponent from '../Components/DisplayComponent'
 
 class MachineContainer extends React.Component {
 
@@ -7,7 +8,7 @@ class MachineContainer extends React.Component {
     return(
       <div className="machine-wrapper">
         <div className="machine">
-          
+          <DisplayComponent />
         </div>
       </div>
     );
