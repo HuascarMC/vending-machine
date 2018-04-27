@@ -135,7 +135,7 @@ li {
 }
 
 .machine {
-    background-color: rgb(223, 160, 102);
+    background-color: rgb(235, 157, 86);
   width: 80%;
   height: 70%;
   border-radius: 10%;
@@ -147,6 +147,7 @@ li {
 }
 
 .display-wrapper {
+  margin-top: 6%;
   overflow: auto;
 background-color: rgb(37, 37, 37);
   border-radius: 10%;
@@ -157,12 +158,18 @@ background-color: rgb(37, 37, 37);
 
 .input-wrapper {
   overflow: auto;
-  background-color: green;
-  float: left;
-  height: 70%;
+  height: auto;
   width: 20%;
-  margin: 4%;
+  margin: 30% 5% 0 0;
   padding: 0;
+  display: inline-block;
+  background-color: rgb(37, 37, 37); 
+  border-radius: 20%;
+}
+
+.input-box {
+  overflow: hidden;
+  height: auto;
 }
 
 .order-button-wrapper {
@@ -214,17 +221,17 @@ background-color: rgb(37, 37, 37);
 
 .display {
   vertical-align: baseline;
-  margin-left: 25%;
+  margin-left: 20%;
   background-color: rgb(37, 37, 37);
   -webkit-border-radius: 13;
   -moz-border-radius: 13;
   border: solid #c2c2c2 4px;
   color: green;
-  height: 8%;
+  height: 10%;
   width: 20%;
   border-radius: 30%;
   display: inline-block;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .balance {
@@ -425,27 +432,14 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
 .coin {
   cursor: pointer;
   content: "";
-  width: 52px;
-  height: 52px;
-  : inline-block;
+  width: 5%;
+  height: 5%;
+  display: inline-block;
   position: relative;
-  margin: 5px;
-  top: 6px;
-  border-radius: 50px;
   z-index: 500;
   box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .1);
 }
 
-.coin p{
-  font-family: georgia;
-  font-style: italic;
-  position: absolute;
-  font-size: 28px;
-  z-index: 700;
-  top: -19px;
-  left: 19px;
-
-  }
 
 .coin.bronze p{  color: rgba(223,182,103,1);}
 .coin.silver p{  color: rgba(160,160,160,1);}
@@ -454,25 +448,25 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
 .coin{
   cursor: pointer;
   content: "";
-  width: 52px;
-  height: 52px;
+  width: 10px;
+  height: 10px;
   display: inline-block;
   position: relative;
-  margin: 5px;
+  /* margin: 5px;
   top: 6px;
   border-radius: 50px;
-  z-index: 500;
-  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .1);
+  z-index: 500; */
+  /* box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, .1); */
   outline: none;
-	-webkit-box-shadow: 18px 10px 10px #000000;
-	-moz-box-shadow: 18px 10px 10px #000000;
-	box-shadow: 18px 10px 10px #000000;
+	/* -webkit-box-shadow: 18px 10px 10px #000000; */
+	/* -moz-box-shadow: 18px 10px 10px #000000; */
+	box-shadow: 9px -3px 5px #000000;
   }
 
 .coin:after{
   content: "";
-  width: 42px;
-  height: 42px;
+  width: 300%;
+  height: 300%;
   display: block;
   top: 4px;
   left: 4px;
