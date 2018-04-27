@@ -13,6 +13,12 @@ class MachineContainer extends React.Component {
     }
   }
 
+  updateItem(choice) {
+    this.setState({
+      item: choice
+    })
+  }
+
   updateBalance(amount) {
     this.setState({
       balance: this.state.balance + amount
@@ -23,7 +29,7 @@ class MachineContainer extends React.Component {
     return(
       <div className="machine-wrapper">
         <div className="machine">
-          <DisplayComponent />
+          <DisplayComponent updateItem={ this.updateItem.bind(this) }/>
           <InputComponent updateBalance={ this.updateBalance.bind(this) } balance={ this.state.balance }/>
           <OrderButtonComponent/>
         </div>
