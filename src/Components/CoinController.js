@@ -13,13 +13,23 @@ class CoinController extends React.Component {
       })
     }
 
+    reduceCoinQuantity(coin) {
+      axios.put(`https://vending-machine-server.herokuapp.com/machine/removecoin/${coin}`, { crossdomain: true})
+      .then((response) => {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    }
+
     return(
       <div className="controller-wrapper">
         <ul>
-          <li>COKE<button onClick={() => this.increaseCoinQuantity()} className="plus">+</button><button className="minus">-</button></li>
-          <li>PEPSI<button className="plus">+</button><button className="minus">-</button></li>
-          <li>SODA<button className="plus">+</button><button className="minus">-</button></li>
-          <li>WATER<button className="plus">+</button><button className="minus">-</button></li>
+          <li>COKE<button onClick={() => this.increaseCoinQuantity()} className="plus">+</button><button onClick={() => this.reduceCoinQuantity()} className="minus">-</button></li>
+          <li>PEPSI<button onClick={() => this.increaseCoinQuantity()} className="plus">+</button><button onClick={() => this.reduceCoinQuantity()} className="minus">-</button></li>
+          <li>SODA<button onClick={() => this.increaseCoinQuantity()} className="plus">+</button><button onClick={() => this.reduceCoinQuantity()} className="minus">-</button></li>
+          <li>WATER<button onClick={() => this.increaseCoinQuantity()} className="plus">+</button><button onClick={() => this.reduceCoinQuantity()} className="minus">-</button></li>
         </ul>
       </div>
     );
