@@ -220,14 +220,13 @@ background-color: rgb(37, 37, 37);
   flex-direction: column;
 }
 
-.display {
+.change-display {
   vertical-align: baseline;
   margin-left: 20%;
   background-color: rgb(37, 37, 37);
   -webkit-border-radius: 13;
   -moz-border-radius: 13;
   border: solid #c2c2c2 4px;
-  color: green;
   height: 10%;
   width: 20%;
   border-radius: 30%;
@@ -492,7 +491,7 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
   box-shadow:  0px 0px 5px 1px rgba(0, 0, 0, .2);
   }
 
-  .balance-display {
+  .display {
     height: 35px;
     width: 120px;
     background-color: rgb(37, 37, 37);
