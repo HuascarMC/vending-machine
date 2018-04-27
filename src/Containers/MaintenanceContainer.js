@@ -21,11 +21,29 @@ class MaintenanceContainer extends React.Component {
     }
   }
 
+  setItemsQuantity(data) {
+    this.setState({
+      coke: data[0].quantity,
+      pepsi: data[1].quantity,
+      soda: data[2].quantity,
+      water: data[3].quantity
+    })
+  }
+
+  setCoinsQuantity(data) {
+    this.setState({
+      dollar: data[0].quantity,
+      quarter: data[1].quantity,
+      dime: data[2].quantity,
+      nickel: data[3].quantity,
+      penny: data[4].quantity
+    })
+  }
+
   getItems = () => {
-      axios.get('https://vending-machine-server.herokuapp.com/machine/items', { crossdomain: true })
+      axios.get('http://localhost:4567/machine/items', { crossdomain: true })
      .then((response) => {
-       console.log(response);
-       this.setState({itemsData: response});
+       this.setItemsQuantity(response.data);
      })
      .catch(function (error) {
        console.log(error);
@@ -33,12 +51,9 @@ class MaintenanceContainer extends React.Component {
   }
 
   getCoins = () => {
-    axios.get('https://vending-machine-server.herokuapp.com/machine/coins', { crossdomain: true})
+    axios.get('http://localhost:4567/machine/coins', { crossdomain: true})
     .then((response) => {
-      console.log(response);
-      // this.setState({
-      //   coinsData: response.data
-      // })
+      this.setCoinsQuantity(response.data);
     })
     .catch(function (error) {
       console.log(error);
