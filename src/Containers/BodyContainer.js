@@ -2,6 +2,7 @@ import React from 'react';
 import OrderContainer from './OrderContainer'
 import MaintenanceContainer from './MaintenanceContainer'
 import MachineContainer from './MachineContainer'
+import ChangeContainer from './ChangeContainer'
 
 class BodyContainer extends React.Component {
 
@@ -12,6 +13,7 @@ class BodyContainer extends React.Component {
         <OrderContainer />
         <MaintenanceContainer />
         <MachineContainer />
+        <ChangeContainer />
       </div>
     );
   }
