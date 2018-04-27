@@ -493,7 +493,7 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
 
   .display {
     height: 35px;
-    width: 120px;
+    width: 25%;
     background-color: rgb(37, 37, 37);
     border-radius: 20px;
     -webkit-border-radius: 13;
