@@ -4,7 +4,7 @@ class ChangeTotalDisplay extends React.Component {
   render() {
     return(
       <div className="display">
-        asdf
+        <p className="balance">$0.00</p>
       </div>
     );
   }
