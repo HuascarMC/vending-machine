@@ -1,8 +1,8 @@
 import React from 'react';
-import DisplayComponent from '../Components/DisplayComponent'
+import StockDisplayComponent from '../Components/StockDisplayComponent'
 import InputComponent from '../Components/InputComponent'
 import OrderButtonComponent from '../Components/OrderButtonComponent'
-import BalanceDisplayComponent from '../Components/BalanceDisplayComponent'
+import DisplayComponent from '../Components/DisplayComponent'
 
 class MachineContainer extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class MachineContainer extends React.Component {
 
   updateBalance(amount) {
     this.setState({
-      balance: this.state.balance + amount
+      balance: amount
     })
   }
 
@@ -30,9 +30,9 @@ class MachineContainer extends React.Component {
     return(
       <div className="machine-wrapper">
         <div className="machine">
-          <BalanceDisplayComponent value={ this.state.item }/>
-          <BalanceDisplayComponent value={'$' + this.state.balance.toFixed(2) }/>
-          <DisplayComponent updateItem={ this.updateItem.bind(this) }/>
+          <DisplayComponent value={ this.state.item }/>
+          <DisplayComponent value={'$' + this.state.balance.toFixed(2) }/>
+          <StockDisplayComponent updateItem={ this.updateItem.bind(this) }/>
           <InputComponent updateBalance={ this.updateBalance.bind(this) } state={ this.state }/>
           <OrderButtonComponent updateBalance={ this.updateBalance.bind(this) } updateChange={ this.props.updateChange } balance={ this.state.balance }/>
         </div>
