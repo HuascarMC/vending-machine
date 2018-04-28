@@ -21,6 +21,11 @@ class MaintenanceContainer extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.getItems();
+    this.getCoins();
+  }
+
   setItemsQuantity(data) {
     this.setState({
       coke: data[0].quantity,
@@ -61,8 +66,6 @@ class MaintenanceContainer extends React.Component {
   }
 
   render() {
-    this.getCoins();
-    this.getItems();
     return(
       <div className="maintenance-wrapper">
         <CoinController coins={ this.state }/>

@@ -9,9 +9,11 @@ class BodyContainer extends React.Component {
     super(props);
 
     this.state = {
-      change: 0.00
+      change: 0.00,
+      transactionState: ""
     }
     this.updateChange = this.updateChange.bind(this);
+    this.updateTransactionState = this.updateTransactionState.bind(this);
   }
 
   updateChange(amount) {
@@ -20,12 +22,18 @@ class BodyContainer extends React.Component {
     })
   }
 
+  updateTransactionState(state) {
+    this.setState({
+      transactionState: state
+    })
+  }
+
   render() {
     return(
       <div className="content-wrapper">
-        <OrderContainer />
+        <OrderContainer state={ this.state }/>
         <MaintenanceContainer />
-        <MachineContainer updateChange={ this.updateChange }/>
+        <MachineContainer updateChange={ this.updateChange } updateTransactionState={ this.updateTransactionState }/>
         <ChangeContainer change={ this.state.change }/>
       </div>
     );
