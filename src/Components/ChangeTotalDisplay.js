@@ -4,7 +4,7 @@ class ChangeTotalDisplay extends React.Component {
   render() {
     return(
       <div className="display change-display">
-        <p className="display-text">$0.00</p>
+        <p className="display-text">${ this.props.amount }</p>
       </div>
     );
   }

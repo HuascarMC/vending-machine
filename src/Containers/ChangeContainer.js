@@ -7,7 +7,7 @@ class ChangeContainer extends React.Component {
   render() {
     return(
       <div className="change-wrapper">
-        <ChangeTotalDisplay />
+        <ChangeTotalDisplay amount={ this.props.change.toFixed(2) }/>
         <ChangeComponent />
       </div>
     );

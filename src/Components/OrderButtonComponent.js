@@ -1,10 +1,16 @@
 import React from 'react';
 
 class OrderButtonComponent extends React.Component {
+
+  pressReturn() {
+    this.props.updateChange(this.props.balance);
+    this.props.updateBalance(0.00);
+  }
+
   render() {
     return(
       <div className="order-button-wrapper">
-        <button className="order-button">RETURN</button>
+        <button className="order-button" onClick={ this.pressReturn.bind(this) }>RETURN</button>
         <button className="order-button">PUSH</button>
       </div>
     );
