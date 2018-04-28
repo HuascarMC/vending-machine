@@ -10,11 +10,13 @@ class BodyContainer extends React.Component {
 
     this.state = {
       change: 0.00,
-      transactionState: ""
+      transactionState: "",
+      itemImage: undefined
     }
     this.updateChange = this.updateChange.bind(this);
     this.updateTransactionState = this.updateTransactionState.bind(this);
     this.setResponse = this.setResponse.bind(this);
+    this.setImage = this.setImage.bind(this);
   }
 
   setResponse(response) {
@@ -24,6 +26,22 @@ class BodyContainer extends React.Component {
         transactionState: response.data.third
       })
     }
+    this.setImage(response.data.first)
+  }
+
+
+  setImage(item) {
+      switch(item) {
+        case "COKE":
+        return this.setState({itemImage: "http://www.pngall.com/wp-content/uploads/2016/04/Coca-Cola-PNG-Picture.png"})
+        case "PEPSI":
+        return this.setState({itemImage: "http://pngimg.com/uploads/pepsi/pepsi_PNG8.png"})
+        case "SODA":
+        return this.setState({itemImage: "http://www.pngall.com/wp-content/uploads/2016/04/Coconut-Free-Download-PNG.png"})
+        case "WATER":
+        return this.setState({itemImage: "http://www.pngall.com/wp-content/uploads/2016/04/Water-Bottle-PNG-Picture.png"})
+      }
+    this.setState({itemImage: undefined})
   }
 
   updateChange(amount) {

@@ -5,7 +5,7 @@ class ItemController extends React.Component {
 
 
   increaseItemQuantity(item) {
-    axios.put(`https://vending-machine-server.herokuapp.com/machine/removeitem/${item}`, { crossdomain: true})
+    axios.put(`https://vending-machine-server.herokuapp.com/machine/additem/${item}`, { crossdomain: true})
     .then((response) => {
       console.log(response);
     })

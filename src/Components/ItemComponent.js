@@ -6,7 +6,7 @@ class ItemComponent extends React.Component {
       <div className="item-wrapper">
         <p className="title">bucket</p>
         <div className="order-img">
-          <img src="http://www.pngall.com/wp-content/uploads/2016/04/Coca-Cola-PNG-Picture.png"/>
+          <img src={ this.props.itemImage }/>
         </div>
       </div>
     );
