@@ -21,6 +21,7 @@ class MachineContainer extends React.Component {
       console.log(response);
       this.updateItem("none")
       this.updateBalance(0.00)
+      this.props.setResponse(response)
     })
     .catch(function (error) {
       console.log(error);

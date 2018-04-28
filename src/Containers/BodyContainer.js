@@ -14,6 +14,16 @@ class BodyContainer extends React.Component {
     }
     this.updateChange = this.updateChange.bind(this);
     this.updateTransactionState = this.updateTransactionState.bind(this);
+    this.setResponse = this.setResponse.bind(this);
+  }
+
+  setResponse(response) {
+    if(response !== undefined) {
+      this.setState({
+        change: response.data.fourth,
+        transactionState: response.data.third
+      })
+    }
   }
 
   updateChange(amount) {
@@ -33,7 +43,7 @@ class BodyContainer extends React.Component {
       <div className="content-wrapper">
         <OrderContainer state={ this.state }/>
         <MaintenanceContainer />
-        <MachineContainer updateChange={ this.updateChange } updateTransactionState={ this.updateTransactionState }/>
+        <MachineContainer updateChange={ this.updateChange } updateTransactionState={ this.updateTransactionState } setResponse={ this.setResponse }/>
         <ChangeContainer change={ this.state.change }/>
       </div>
     );
