@@ -147,8 +147,8 @@ li {
 }
 
 .display-wrapper {
-  margin-top: 6%;
   overflow: auto;
+  margin-top: -27%;
 background-color: rgb(37, 37, 37);
   border-radius: 10%;
   float: left;
@@ -507,7 +507,7 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
     font-size: 10%;
   }
 
-  .machine-display {
+  .splay {
     margin-left: 72%;
     margin-top: 10%;
   }
@@ -517,4 +517,9 @@ background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56
     margin: 2%;
     color: green;
     font-size: 1400%;
+  }
+
+  .machine-display {
+    margin: 5% 0 0 73%;
+
   }
