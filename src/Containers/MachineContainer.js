@@ -47,7 +47,7 @@ class MachineContainer extends React.Component {
           <DisplayComponent value={'$' + this.state.balance.toFixed(2) }/>
           <StockDisplayComponent updateItem={ this.updateItem.bind(this) }/>
           <InputComponent updateBalance={ this.updateBalance.bind(this) } state={ this.state }/>
-          <OrderButtonComponent updateBalance={ this.updateBalance.bind(this) } updateChange={ this.props.updateChange } balance={ this.state.balance } order={ this.order.bind(this)}/>
+          <OrderButtonComponent updateBalance={ this.updateBalance.bind(this) } updateChange={ this.props.updateChange } balance={ this.state.balance } order={ this.order.bind(this) }/>
         </div>
       </div>
     );

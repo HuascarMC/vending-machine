@@ -14,8 +14,8 @@ class OrderButtonComponent extends React.Component {
   render() {
     return(
       <div className="order-button-wrapper">
-        <button className="order-button" onClick={this.pressReturn.bind(this) }>RETURN</button>
-        <button className="order-button">PUSH</button>
+        <button className="order-button" onClick={ this.pressReturn.bind(this) }>RETURN</button>
+        <button className="order-button" onClick={ this.pressPush.bind(this) }>PUSH</button>
       </div>
     );
   }
