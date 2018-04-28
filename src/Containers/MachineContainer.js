@@ -8,7 +8,7 @@ class MachineContainer extends React.Component {
     super(props);
 
     this.state = {
-      item: 0.00,
+      item: 'none',
       balance: 0.00
     }
   }
@@ -30,7 +30,7 @@ class MachineContainer extends React.Component {
       <div className="machine-wrapper">
         <div className="machine">
           <DisplayComponent updateItem={ this.updateItem.bind(this) }/>
-          <InputComponent updateBalance={ this.updateBalance.bind(this) } balance={ this.state.balance }/>
+          <InputComponent updateBalance={ this.updateBalance.bind(this) } state={ this.state }/>
           <OrderButtonComponent/>
         </div>
       </div>

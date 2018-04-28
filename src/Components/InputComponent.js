@@ -3,9 +3,11 @@ import BalanceDisplayComponent from './BalanceDisplayComponent'
 
 class InputComponent extends React.Component {
   render() {
+    console.log(this.props);
     return(
       <div>
-        <BalanceDisplayComponent balance={ this.props.balance } />
+        <BalanceDisplayComponent value={ this.props.state.item }/>
+        <BalanceDisplayComponent value={'$' + this.props.state.balance.toFixed(2) }/>
         <div className="input-wrapper">
         <ul className="input-box">
           <li><p className="coin-value">$0.01<button onClick={ ()=>this.props.updateBalance(0.01) } className="coin bronze"></button></p></li>
