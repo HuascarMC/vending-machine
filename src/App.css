@@ -151,7 +151,10 @@ li {
   position: relative;
   padding: 4%;
   margin-top: 10%;
-  margin-left: 1%;
+  margin-left: 5%;
+  -webkit-box-shadow: 15px 15px 15px #000000;
+  -moz-box-shadow: 15px 15px 15px #000000;
+  box-shadow: 15px 15px 15px #000000;
 }
 
 .display-wrapper {
