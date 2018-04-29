@@ -23,6 +23,7 @@ body {
 
 }
 
+
 .github-logo {
   height: 50px;
   width: 50px;
@@ -126,6 +127,7 @@ li {
   margin: 4%;
   height: 20%;
   color: white;
+  list-style-type: none;
 }
 
 .machine-wrapper {
