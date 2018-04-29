@@ -1,181 +1,58 @@
 import React from 'react';
-import InputContainer from './InputContainer.js'
-import DisplayComponent from '../Components/DisplayComponent.js'
-import MachineMaintenanceContainer from './MachineMaintenanceContainer.js'
-import OrderDisplayComponent from '../Components/OrderDisplayComponent.js'
-import axios from 'axios';
+import StockDisplayComponent from '../Components/StockDisplayComponent'
+import InputComponent from '../Components/InputComponent'
+import OrderButtonComponent from '../Components/OrderButtonComponent'
+import DisplayComponent from '../Components/DisplayComponent'
+import axios from 'axios'
 
 class MachineContainer extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      item: "none",
-      balance: 0.00,
-      COKE: 0,
-      PEPSI: 0,
-      SODA: 0,
-      WATER: 0,
-      DOLLAR: 0,
-      QUARTER: 0,
-      DIME: 0,
-      NICKEL: 0,
-      PENNY: 0
+      item: 'none',
+      balance: 0.00
     }
-    this.pushOrder = this.pushOrder.bind(this);
-    this.tryOrder = this.tryOrder.bind(this);
-    this.getItems = this.getItems.bind(this);
-    this.getCoins = this.getCoins.bind(this);
-    this.increaseCoinQuantity = this.increaseCoinQuantity.bind(this);
-    this.increaseItemQuantity = this.increaseItemQuantity.bind(this);
-    this.reduceCoinQuantity = this.reduceCoinQuantity.bind(this);
-    this.reduceItemQuantity = this.reduceItemQuantity.bind(this);
-}
-componentDidMount() {
-  this.getItems();
-  this.getCoins();
-}
-getItems = () => {
-    axios.get('https://vending-machine-server.herokuapp.com/machine/items', { crossdomain: true })
-   .then((response) => {
-     console.log(response);
-     this.setItemsQuantity(response.data)
-   })
-   .catch(function (error) {
-     console.log(error);
-   })
-}
+  }
 
-getCoins = () => {
-  axios.get('https://vending-machine-server.herokuapp.com/machine/coins', { crossdomain: true})
-  .then((response) => {
-    console.log(response);
-    this.setCoinsQuantity(response.data)
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-}
-
-setItemsQuantity(data) {
-  this.setState({
-    COKE: data[0].quantity,
-    PEPSI: data[1].quantity,
-    SODA: data[2].quantity,
-    WATER: data[3].quantity
-  })
-}
-
-setCoinsQuantity(data) {
-  this.setState({
-    DOLLAR: data[0].quantity,
-    QUARTER: data[1].quantity,
-    DIME: data[2].quantity,
-    NICKEL: data[3].quantity,
-    PENNY: data[4].quantity
-  })
-}
-
-increaseItemQuantity(item) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/additem/${item}`, { crossdomain: true})
-  .then((response) => {
-    console.log(response);
-    this.getItems();
-    this.getCoins();
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-}
-
-increaseCoinQuantity(coin) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/addcoin/${coin}`, { crossdomain: true})
-  .then((response) => {
-    console.log(response);
-    this.getItems();
-    this.getCoins();
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-}
-
-reduceItemQuantity(item) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/removeitem/${item}`, { crossdomain: true})
-  .then((response) => {
-    console.log(response);
-    this.getItems();
-    this.getCoins();
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-}
-
-reduceCoinQuantity(coin) {
-  axios.put(`https://vending-machine-server.herokuapp.com/machine/removecoin/${coin}`, { crossdomain: true})
-  .then((response) => {
-    console.log(response);
-    this.getItems();
-    this.getCoins();
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-}
-
-pushReturn() {
-  this.props.setChange(this.state.balance)
-  this.resetBalance()
-}
-
-pushOrder() {
-  this.tryOrder();
-  this.getItems();
-  this.getCoins();
-}
-
-tryOrder() {
-  axios.post('https://vending-machine-server.herokuapp.com/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
- .then((response) => {
-   // console.log(response);
-   this.props.setResponse(response)
-   this.resetBalance()
- })
- .catch(function (error) {
-   console.log(error);
- })
-}
-
-resetBalance() {
-  this.setState({
-    balance: 0.00
-  })
-}
-
-updateItem(item) {
-    this.setState({
-        item: item,
+  order() {
+    axios.post('https://vending-machine-server.herokuapp.com/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
+    .then((response) => {
+      this.updateItem("none")
+      this.updateBalance(0.00)
+      this.props.setResponse(response)
     })
-}
+    .catch(function (error) {
+      console.log(error);
+    })
+  }
 
-updateBalance(balance) {
-  this.setState({
-    balance: this.state.balance + balance
-  })
-}
+  updateItem(choice) {
+    this.setState({
+      item: choice
+    })
+  }
 
+  updateBalance(amount) {
+    if(amount <= 3) {
+      this.setState({
+        balance: amount
+      })
+    }
+  }
 
   render() {
     return(
-      <div>
-        <MachineMaintenanceContainer state={this.state} increaseCoinQuantity={this.increaseCoinQuantity} increaseItemQuantity={this.increaseItemQuantity} reduceCoinQuantity={this.reduceCoinQuantity} reduceItemQuantity={this.reduceItemQuantity} getItems={this.getItems} getCoins={this.getCoins}/>
-        <OrderDisplayComponent state={this.state} />
-      <div className="machine">
-          <InputContainer updateBalance={this.updateBalance.bind(this)} pushReturn={this.pushReturn.bind(this)} pushOrder={this.pushOrder.bind(this)} balance={this.state.balance}/>
-          <DisplayComponent updateItem={this.updateItem.bind(this)} />
+      <div className="machine-wrapper">
+        <div className="machine">
+          <DisplayComponent value={ this.state.item }/>
+          <DisplayComponent value={'$' + this.state.balance.toFixed(2) }/>
+          <StockDisplayComponent updateItem={ this.updateItem.bind(this) }/>
+          <InputComponent updateBalance={ this.updateBalance.bind(this) } state={ this.state }/>
+          <OrderButtonComponent updateBalance={ this.updateBalance.bind(this) } updateChange={ this.props.updateChange } balance={ this.state.balance } order={ this.order.bind(this) }/>
+        </div>
       </div>
-    </div>
-    )
+    );
   }
 }
 
