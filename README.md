@@ -1,5 +1,5 @@
-# Running on the cloud with AWS
-
+# Running on the cloud with Heroku and DB with AWS
+State: crashes with many connections.
 ## Click [here](https://vending-machine-server.herokuapp.com).
 
 ## What is it
