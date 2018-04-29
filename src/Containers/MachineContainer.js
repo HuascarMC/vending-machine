@@ -18,7 +18,6 @@ class MachineContainer extends React.Component {
   order() {
     axios.post('https://vending-machine-server.herokuapp.com/order', JSON.stringify({item: this.state.item, balance: this.state.balance}))
     .then((response) => {
-      console.log(response);
       this.updateItem("none")
       this.updateBalance(0.00)
       this.props.setResponse(response)
@@ -35,9 +34,11 @@ class MachineContainer extends React.Component {
   }
 
   updateBalance(amount) {
-    this.setState({
-      balance: amount
-    })
+    if(amount <= 3) {
+      this.setState({
+        balance: amount
+      })
+    }
   }
 
   render() {

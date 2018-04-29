@@ -14,15 +14,15 @@ class ChangeComponent extends React.Component {
   generateCoin(coin) {
     switch(coin) {
       case "PENNY":
-      return <li><p className="coinValue change">{coin.toString()}$0.01<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p></li>
+      return <p className="coinValue change">{coin.toString()}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>
       case "NICKEL":
-      return <li><p className="coinValue change">{coin.toString()}$0.05<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p></li>
+      return <p className="coinValue change">{coin.toString()}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>
       case "DIME":
-      return <li><p className="coinValue change">{coin.toString()}$0.10<button className="coin silver" onClick={ () => this.updateBalance(0.05) }></button></p></li>
+      return <p className="coinValue change">{coin.toString()}<button className="coin silver" onClick={ () => this.updateBalance(0.05) }></button></p>
       case "QUARTER":
-      return <li><p className="coinValue change">{coin.toString()}$0.25<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p></li>
+      return <p className="coinValue change">{coin.toString()}<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p>
       case "DOLLAR":
-      return <li><p className="coinValue change">{coin.toString()}$1.00<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p></li>
+      return <p className="coinValue change">{coin.toString()}<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p>
     }
   }
 

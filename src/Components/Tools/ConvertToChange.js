@@ -5,7 +5,6 @@ var ConvertToChange = function(amount) {
     if(amount >= 1.00) {
       result.push("DOLLAR")
       amount -= 1.00;
-      console.log(amount);
     } else if (amount >= 0.25) {
       result.push("QUARTER")
       amount -= 0.25;

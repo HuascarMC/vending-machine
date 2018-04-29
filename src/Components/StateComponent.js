@@ -2,7 +2,6 @@ import React from 'react';
 
 class StateComponent extends React.Component {
   render() {
-    console.log(this.props.state);
     return(
       <div className="state-wrapper">
         <p className="title">state</p>

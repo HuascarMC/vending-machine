@@ -68,8 +68,8 @@ class MaintenanceContainer extends React.Component {
   render() {
     return(
       <div className="maintenance-wrapper">
-        <CoinController coins={ this.state }/>
-        <ItemController items={ this.state }/>
+        <CoinController coins={ this.state } getCoins={ this.getCoins.bind(this) }/>
+        <ItemController items={ this.state } getItems={ this.getItems.bind(this) }/>
       </div>
     );
   }

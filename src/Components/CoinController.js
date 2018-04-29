@@ -6,7 +6,7 @@ class CoinController extends React.Component {
   increaseCoinQuantity(coin) {
     axios.put(`https://vending-machine-server.herokuapp.com/machine/addcoin/${coin}`, { crossdomain: true})
     .then((response) => {
-      console.log(response);
+      this.props.getCoins();
     })
     .catch(function (error) {
       console.log(error);
@@ -16,7 +16,7 @@ class CoinController extends React.Component {
   reduceCoinQuantity(coin) {
     axios.put(`https://vending-machine-server.herokuapp.com/machine/removecoin/${coin}`, { crossdomain: true})
     .then((response) => {
-      console.log(response);
+      this.props.getCoins();
     })
     .catch(function (error) {
       console.log(error);
