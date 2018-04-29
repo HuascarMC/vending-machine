@@ -62,7 +62,7 @@ class BodyContainer extends React.Component {
         <OrderContainer state={ this.state }/>
         <MaintenanceContainer />
         <MachineContainer updateChange={ this.updateChange } updateTransactionState={ this.updateTransactionState } setResponse={ this.setResponse }/>
-        <ChangeContainer change={ this.state.change }/>
+        <ChangeContainer change={ this.state.change.toFixed(2) }/>
       </div>
     );
   }

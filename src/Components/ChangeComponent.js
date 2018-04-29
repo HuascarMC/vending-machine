@@ -1,4 +1,5 @@
 import React from 'react';
+import ConvertToChange from './Tools/ConvertToChange'
 
 class ChangeComponent extends React.Component {
 
@@ -7,7 +8,7 @@ class ChangeComponent extends React.Component {
     for(var i = 0; i < change.length; i++) {
       htmlChange.unshift(this.generateCoin(change[i]))
     }
-    console.log(change);
+    console.log(typeof change);
     return htmlChange
   }
 
@@ -28,10 +29,10 @@ class ChangeComponent extends React.Component {
 
   render() {
     var change;
-    if ((typeof this.props.changeTotal) == "number") {
-      change = this.generateChange(ConvertToChange(this.props.changeTotal))
+    if ((typeof this.props.amount) == "string") {
+      change = this.generateChange(ConvertToChange(this.props.amount))
     } else {
-      change = this.generateChange(this.props.changeTotal)
+      change = this.generateChange(this.props.amount)
     }
     return(
       <div className="change-box">
