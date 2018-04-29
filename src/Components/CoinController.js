@@ -4,7 +4,7 @@ import axios from 'axios'
 class CoinController extends React.Component {
 
   increaseCoinQuantity(coin) {
-    axios.put(`https://vending-machine-server.herokuapp.com/machine/addcoin/${coin}`, { crossdomain: true})
+    axios.put(`https://localhost:4567/machine/addcoin/${coin}`, { crossdomain: true})
     .then((response) => {
       this.props.getCoins();
     })
@@ -14,7 +14,7 @@ class CoinController extends React.Component {
   }
 
   reduceCoinQuantity(coin) {
-    axios.put(`https://vending-machine-server.herokuapp.com/machine/removecoin/${coin}`, { crossdomain: true})
+    axios.put(`https://localhost:4567/machine/removecoin/${coin}`, { crossdomain: true})
     .then((response) => {
       this.props.getCoins();
     })

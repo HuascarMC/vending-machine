@@ -5,7 +5,7 @@ class ItemController extends React.Component {
 
 
   increaseItemQuantity(item) {
-    axios.put(`https://vending-machine-server.herokuapp.com/machine/additem/${item}`, { crossdomain: true})
+    axios.put(`https://localhost:4567/machine/additem/${item}`, { crossdomain: true})
     .then((response) => {
       this.props.getItems();
     })
@@ -15,7 +15,7 @@ class ItemController extends React.Component {
   }
 
   reduceItemQuantity(item) {
-    axios.put(`https://vending-machine-server.herokuapp.com/machine/removeitem/${item}`, { crossdomain: true})
+    axios.put(`https://localhost:4567/machine/removeitem/${item}`, { crossdomain: true})
     .then((response) => {
       this.props.getItems();
     })
