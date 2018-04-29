@@ -1,8 +1,15 @@
+# Running on the cloud with AWS
+
+## Click [here](https://vending-machine-server.herokuapp.com).
+
 ## What is it
 
 React UI that simulates the usage of a vending machine, it reacts to the response of
-requests made on a RESTful API that runs on the server side, click [here](https://github.com/HuascarMC/vending-machine-server)
-to see the server's repo.
+requests that are triggered by the user on a RESTful API that runs on the server side, click [here](https://github.com/HuascarMC/vending-machine-server)
+to see the server repo.
+
+It also allows manipulation of the stock/coin inventory through the server by accessing a launched database
+that runs on AWS cloud RDS.
 
 The stack:
 
@@ -10,20 +17,31 @@ The stack:
 - Airbnb's enzyme
 - AXIOS
 
-# NOTE:
-The server currently runs locally so running this by itself will only render the looks without any functionality.
-Setup the [server-repo](https://github.com/HuascarMC/vending-machine-server) for functionality.
+**Improving** The project is currently running on the cloud, it may take a while to load as Heroku puts the dynos to sleep when inactive. Heroku is not rendering css well but one is able to launch both the server and the client by just clicking [here](https://vending-machine-server.herokuapp.com) and following the instructions. If it doesn't load quickly, leave it for a while and then refresh. Try not to make too many requests at once as it can crash the server and it will need to be re-deployed.
 
-![alt-text](/public/images/vm-example.png)
+![alt-text](/public/images/vm-screenshot.png)
 
 Video doesn't show updated UI. Click [here](https://www.youtube.com/watch?v=CIPDGBx8jxQ) a Youtube video.
 
-
 ## How to run
 
-- Clone this repo into your local machine.
+## NOTE:
+In case you would like to run it locally it will be required to clone this repo's branch 'local'. This branch just changes the remote routes where the requests are made to the local ones.
+
+*Example*
+Instead of making an order request on:
 ```
-git clone https://github.com/HuascarMC/vending-machine-client
+/POST https://vending-machine-client.herokuapp.com/order
+```
+It will use:
+```
+/POST http://localhost:4567/order
+```
+
+
+- Clone this repo's LOCAL branch into your local machine.
+```
+git clone https://github.com/HuascarMC/vending-machine-client/tree/local
 ```
 - Go inside directory.
 ```
@@ -33,38 +51,47 @@ cd vending-machine-client
 ```
 npm i
 ```
-- Run all the tests .
-```
-npm test
-```
-Press 'a' to run all tests:
-```
-a
-```
-- Open another terminal tab and run the server.
+- Run the app.
 ```
 npm start
 ```
-- If your browser doesn't open automatically, go to:
+- If your browser (chrome recommended) doesn't open automatically, go to:
 ```
 http://localhost:3000
 ```
-- The app will display an input box, you should be able to get a prime multiplication table by typing a number 0 < 500
-and pressing enter.
 
+*REMINDER*: Setup the [server-repo](https://github.com/HuascarMC/vending-machine-server) for functionality and run both applications at the same time.
 
 ## Functionality
 
-- *UNDER CONSTRUCTION*
+User's interaction:
+
+- Click on the coins to increase balance (INSERT COINS).
+
+- Click on a selection on the display (CHOOSE ITEM).
+
+- Click push to make order (MAKE ORDER).
+
+- Click return to get money back (RETURN CHANGE).
+
+Maintenance interaction:
+
+- Increase/decrease items stock (ALTER ITEMS INVENTORY).
+
+- Increase/decrease coin stock (ALTER COINS INVENTORY).
 
 
 # Things to improve/currently working on.
 
-- ~~Refactor, child components shouldn't have a state~~.
+- ~~Refactor, child components shouldn't have a state~~.(Refactored)
+
+- ~~App doesn't render well on different browsers~~.(Applied normalize.css package)
 
 - State flow between components is not clear.
 
 - Occasional issue rendering change.
+
+- Slow due to the web-app, server and database running separately on the cloud.
 
 - Separation of concerns is not clear.
 
