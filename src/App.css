@@ -23,7 +23,6 @@ body {
 
 }
 
-
 .github-logo {
   height: 50px;
   width: 50px;
@@ -51,22 +50,25 @@ img {
   /* background-color: yellow; */
   width: 20%;
   padding: 3%;
-  margin-top: 4%;
+
 }
 
 .item-wrapper {
   overflow: auto;
   background-color: rgb(37, 37, 37);
   border-radius: 20%;
+  margin-top: 9%;
   width: 80%;
+  height:35%;
   margin-left: 20%;
 }
 
 .order-img {
   display: inline-block;
-  height: 60%;
-  width: 60%;
+  height: 35%;
+  width: 35%;
 }
+
 
 .title {
   font-size: 180%;
@@ -82,11 +84,11 @@ img {
   margin-top: 20%;
   background-color: rgb(37, 37, 37);
   border-radius: 20%;
-  height: 30%;
+  height: 25%;
   width: 70%;
   margin-left: 20%;
   text-align: left;
-  padding: 5%;
+  padding: 7%;
 }
 
 .maintenance-wrapper {

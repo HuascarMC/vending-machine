@@ -4,12 +4,11 @@ import ConvertToChange from './Tools/ConvertToChange'
 class ChangeComponent extends React.Component {
 
   generateChange(change) {
-    var htmlChange = []
+    var changeInCoins = []
     for(var i = 0; i < change.length; i++) {
-      htmlChange.unshift(this.generateCoin(change[i]))
+      changeInCoins.unshift(this.generateCoin(change[i]))
     }
-    console.log(typeof change);
-    return htmlChange
+    return changeInCoins;
   }
 
   generateCoin(coin) {

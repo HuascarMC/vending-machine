@@ -46,7 +46,7 @@ class MaintenanceContainer extends React.Component {
   }
 
   getItems = () => {
-      axios.get('http://localhost:4567/machine/items', { crossdomain: true })
+      axios.get('https://vending-machine-server.herokuapp.com/machine/items', { crossdomain: true })
      .then((response) => {
        this.setItemsQuantity(response.data);
      })
@@ -56,7 +56,7 @@ class MaintenanceContainer extends React.Component {
   }
 
   getCoins = () => {
-    axios.get('http://localhost:4567/machine/coins', { crossdomain: true})
+    axios.get('https://vending-machine-server.herokuapp.com/machine/coins', { crossdomain: true})
     .then((response) => {
       this.setCoinsQuantity(response.data);
     })

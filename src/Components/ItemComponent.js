@@ -5,8 +5,8 @@ class ItemComponent extends React.Component {
     return(
       <div className="item-wrapper">
         <p className="title">bucket</p>
-        <div className="order-img">
-          <img src={ this.props.itemImage }/>
+        <div className="order-img-container">
+          <img className="order-img" src={ this.props.itemImage }/>
         </div>
       </div>
     );

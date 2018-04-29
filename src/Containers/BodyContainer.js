@@ -33,13 +33,13 @@ class BodyContainer extends React.Component {
   setImage(item) {
       switch(item) {
         case "COKE":
-        return this.setState({itemImage: "http://www.pngall.com/wp-content/uploads/2016/04/Coca-Cola-PNG-Picture.png"})
+        return this.setState({itemImage: "/images/coke.png"})
         case "PEPSI":
-        return this.setState({itemImage: "http://pngimg.com/uploads/pepsi/pepsi_PNG8.png"})
+        return this.setState({itemImage: "/images/pepsi.png"})
         case "SODA":
-        return this.setState({itemImage: "http://www.pngall.com/wp-content/uploads/2016/04/Coconut-Free-Download-PNG.png"})
+        return this.setState({itemImage: "/images/coconut.png"})
         case "WATER":
-        return this.setState({itemImage: "http://www.pngall.com/wp-content/uploads/2016/04/Water-Bottle-PNG-Picture.png"})
+        return this.setState({itemImage: "/images/water.png"})
       }
     this.setState({itemImage: undefined})
   }
