@@ -91,20 +91,27 @@ img {
   padding: 7%;
 }
 
-.state-title {
+.box-text {
   margin: 4%;
+}
+
+.controller-text {
+  margin: 0;
+  width: 4%;
 }
 
 .maintenance-wrapper {
   overflow: auto;
-  width: 10%;
+  width: 13%;
+  height: 100%;
+  display: inline-block;
   /* background-color: purple; */
   /* padding: 3%; */
   text-align: left;
 }
 
 .controller-wrapper {
-  margin-top: 60%;
+  margin-top: 35%;
   overflow: auto;
   width: 90%;
   background-color: rgb(37, 37, 37);
@@ -112,6 +119,7 @@ img {
   border-radius: 10%;
   height: 21%;
   padding: 10%;
+  padding-bottom: 18%;
 }
 
 .plus {
@@ -151,7 +159,10 @@ li {
   position: relative;
   padding: 4%;
   margin-top: 10%;
-  margin-left: 1%;
+  margin-left: 5%;
+  -webkit-box-shadow: 15px 15px 15px #000000;
+  -moz-box-shadow: 15px 15px 15px #000000;
+  box-shadow: 15px 15px 15px #000000;
 }
 
 .display-wrapper {
