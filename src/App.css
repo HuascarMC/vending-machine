@@ -91,8 +91,13 @@ img {
   padding: 7%;
 }
 
-.state-title {
+.box-text {
   margin: 4%;
+}
+
+.controller-text {
+  margin: 0;
+  width: 4%;
 }
 
 .maintenance-wrapper {

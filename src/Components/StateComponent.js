@@ -5,9 +5,9 @@ class StateComponent extends React.Component {
     return(
       <div className="state-wrapper">
         <p className="title">state</p>
-        <p className="state-title">In Stock: {JSON.stringify(this.props.state.transactionState.stockInventoryState) } </p>
-        <p className="state-title">Enough change: {JSON.stringify(this.props.state.transactionState.coinInventoryState) } </p>
-        <p className="state-title">Enough balance: {JSON.stringify(this.props.state.transactionState.balanceState) } </p>
+        <p className="state-text">In Stock: {JSON.stringify(this.props.state.transactionState.stockInventoryState) } </p>
+        <p className="state-text">Enough change: {JSON.stringify(this.props.state.transactionState.coinInventoryState) } </p>
+        <p className="state-text">Enough balance: {JSON.stringify(this.props.state.transactionState.balanceState) } </p>
       </div>
     );
   }
