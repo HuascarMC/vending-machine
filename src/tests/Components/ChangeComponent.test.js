@@ -55,10 +55,16 @@ it('should generate HTML change in coins given array of change', () => {
   const nickel = <p className="coinValue change">{change[1]}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>;
   const expected = [nickel, penny];
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
-})
+});
 
 it('should render change-box div', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const div = wrapper.find('.change-box');
   expect(div.exists()).toEqual(true);
+});
+
+it('should match the snapshot', () => {
+  const component = renderer.create(<ChangeComponent amount={0.00}/>);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 })
