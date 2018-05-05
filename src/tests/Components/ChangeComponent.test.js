@@ -46,3 +46,11 @@ it('should generate HTML coin DOLLAR', () => {
   const expected = <p className="coinValue change">{coin.toString()}<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p>
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
+
+it('should generate change in coins given amount decimal below 1.00', () => {
+  const wrapper = shallow(<ChangeComponent amount={0.00}/>);
+  const amount = 0.75;
+  const actual = wrapper.instance().generateChange(amount);
+  const expected = 0
+  expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
+})
