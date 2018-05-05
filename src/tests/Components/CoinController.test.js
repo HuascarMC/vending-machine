@@ -62,3 +62,9 @@ it('should render penny quantity passed by props', () => {
   const li = wrapper.find('li').at(4);
   expect(li.text()).toEqual("PENN 0+-");
 });
+
+it('should match the snapshot', () => {
+  const component = renderer.create(<CoinController coins={0.00}/>);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
