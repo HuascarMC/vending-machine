@@ -47,6 +47,14 @@ it('should generate HTML coin DOLLAR', () => {
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
+it('should not generate HTML coin if invalid', () => {
+  const wrapper = shallow(<ChangeComponent amount={0.00}/>);
+  const coin = 'HALF-DOLLAR';
+  const actual = wrapper.instance().generateCoin(coin);
+  const expected = undefined
+  expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
+});
+
 it('should generate HTML change in coins given array of change', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const change = ['PENNY', 'NICKEL'];
