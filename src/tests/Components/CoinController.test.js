@@ -19,4 +19,10 @@ it('should render controller-wrapper div', () => {
   const wrapper = shallow(<CoinController coins={state}/>);
   const div = wrapper.find('.controller-wrapper');
   expect(div.exists()).toEqual(true);
-})
+});
+
+it('should render u-list', () => {
+  const wrapper = shallow(<CoinController coins={state}/>);
+  const ul = wrapper.find('ul');
+  expect(ul.exists()).toEqual(true);
+});
