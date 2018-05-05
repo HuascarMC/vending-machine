@@ -50,3 +50,9 @@ it('should render dime quantity passed by props', () => {
   const li = wrapper.find('li').at(2);
   expect(li.text()).toEqual("DIME 0+-");
 });
+
+it('should render nickel quantity passed by props', () => {
+  const wrapper = shallow(<CoinController coins={state}/>);
+  const li = wrapper.find('li').at(3);
+  expect(li.text()).toEqual("NICK 0+-");
+});
