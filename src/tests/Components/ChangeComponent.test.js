@@ -56,3 +56,9 @@ it('should generate HTML change in coins given array of change', () => {
   const expected = [nickel, penny];
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 })
+
+it('should render change-box div', () => {
+  const wrapper = shallow(<ChangeComponent amount={0.00}/>);
+  const div = wrapper.find('.change-box');
+  expect(div.exists()).toEqual(true);
+})
