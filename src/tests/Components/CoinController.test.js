@@ -14,3 +14,9 @@ var state = {
 it('should render without crashing', () => {
   shallow(<CoinController coins={state}/>);
 });
+
+it('should render controller-wrapper div', () => {
+  const wrapper = shallow(<CoinController coins={state}/>);
+  const div = wrapper.find('.controller-wrapper');
+  expect(div.exists()).toEqual(true);
+})
