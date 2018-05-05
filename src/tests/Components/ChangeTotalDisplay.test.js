@@ -17,7 +17,13 @@ it('should render amount inside change display', () => {
   const wrapper = shallow(<ChangeTotalDisplay amount={0.00}/>);
   const p = wrapper.find('.display-text');
   expect(p.exists()).toEqual(true);
-})
+});
+
+it('should render amount passed as props inside display with dollar sign', () => {
+  const wrapper = shallow(<ChangeTotalDisplay amount={0.75}/>);
+  const p = wrapper.find('.display-text');
+  expect(p.text()).toEqual('$0.75');
+});
 
 it('should match the snapshot', () => {
   const component = renderer.create(<ChangeTotalDisplay amount={0.00}/>);
