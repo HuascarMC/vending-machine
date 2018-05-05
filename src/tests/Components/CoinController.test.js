@@ -27,8 +27,8 @@ it('should render u-list', () => {
   expect(ul.exists()).toEqual(true);
 });
 
-xit('should render five list tags', () => {
+it('should render five list tags', () => {
   const wrapper = shallow(<CoinController coins={state}/>);
   const li = wrapper.find('li');
-  expect(li).to.have.length(5);
+  expect((li).length).toBe(5);
 });
