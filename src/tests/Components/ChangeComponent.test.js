@@ -11,7 +11,7 @@ it('should generate HTML coin PENNY', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const coin = 'PENNY';
   const actual = wrapper.instance().generateCoin(coin);
-  const expected = <p className="coinValue change">{coin.toString()}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>
+  const expected = <p className="coinValue change">{coin.toString()}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>;
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
@@ -19,7 +19,7 @@ it('should generate HTML coin NICKEL', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const coin = 'NICKEL';
   const actual = wrapper.instance().generateCoin(coin);
-  const expected = <p className="coinValue change">{coin.toString()}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>
+  const expected = <p className="coinValue change">{coin.toString()}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>;
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
@@ -27,7 +27,7 @@ it('should generate HTML coin DIME', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const coin = 'DIME';
   const actual = wrapper.instance().generateCoin(coin);
-  const expected = <p className="coinValue change">{coin.toString()}<button className="coin silver" onClick={ () => this.updateBalance(0.10) }></button></p>
+  const expected = <p className="coinValue change">{coin.toString()}<button className="coin silver" onClick={ () => this.updateBalance(0.10) }></button></p>;
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
@@ -35,7 +35,7 @@ it('should generate HTML coin QUARTER', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const coin = 'QUARTER';
   const actual = wrapper.instance().generateCoin(coin);
-  const expected = <p className="coinValue change">{coin.toString()}<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p>
+  const expected = <p className="coinValue change">{coin.toString()}<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p>;
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
@@ -43,7 +43,7 @@ it('should generate HTML coin DOLLAR', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const coin = 'DOLLAR';
   const actual = wrapper.instance().generateCoin(coin);
-  const expected = <p className="coinValue change">{coin.toString()}<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p>
+  const expected = <p className="coinValue change">{coin.toString()}<button className="coin gold" onClick={ () => this.updateBalance(1.00) }></button></p>;
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
@@ -51,7 +51,7 @@ it('should not generate HTML coin if invalid', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const coin = 'HALF-DOLLAR';
   const actual = wrapper.instance().generateCoin(coin);
-  const expected = undefined
+  const expected = undefined;
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
@@ -65,11 +65,11 @@ it('should generate HTML change in coins given array of change', () => {
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
 });
 
-it('should not generate HTML change in coins given array of invalid change', () => {
+it('should not generate HTML change in coins given invalid change', () => {
   const wrapper = shallow(<ChangeComponent amount={0.00}/>);
   const change = ['HALF-DOLLAR', 'NICKEL'];
   const actual = wrapper.instance().generateChange(change);
-  const halfDollar = undefined
+  const halfDollar = undefined;
   const nickel = <p className="coinValue change">{change[1]}<button className="coin bronze" onClick={ () => this.updateBalance(0.01) }></button></p>;
   const expected = [nickel, halfDollar];
   expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
@@ -85,4 +85,4 @@ it('should match the snapshot', () => {
   const component = renderer.create(<ChangeComponent amount={0.00}/>);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-})
+});
