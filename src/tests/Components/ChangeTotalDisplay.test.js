@@ -13,6 +13,12 @@ it('should render change-display div', () => {
   expect(div.exists()).toEqual(true);
 });
 
+it('should render amount inside change display', () => {
+  const wrapper = shallow(<ChangeTotalDisplay amount={0.00}/>);
+  const p = wrapper.find('.display-text');
+  expect(p.exists()).toEqual(true);
+})
+
 it('should match the snapshot', () => {
   const component = renderer.create(<ChangeTotalDisplay amount={0.00}/>);
   let tree = component.toJSON();
