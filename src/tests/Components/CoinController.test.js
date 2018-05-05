@@ -56,3 +56,9 @@ it('should render nickel quantity passed by props', () => {
   const li = wrapper.find('li').at(3);
   expect(li.text()).toEqual("NICK 0+-");
 });
+
+it('should render penny quantity passed by props', () => {
+  const wrapper = shallow(<CoinController coins={state}/>);
+  const li = wrapper.find('li').at(4);
+  expect(li.text()).toEqual("PENN 0+-");
+});
