@@ -32,3 +32,9 @@ it('should render five list tags', () => {
   const li = wrapper.find('li');
   expect((li).length).toBe(5);
 });
+
+it('should render dollar quantity pass as props', () => {
+  const wrapper = shallow(<CoinController coins={state}/>);
+  const li = wrapper.find('li').at(0);
+  expect(li.text()).toEqual("DOLL 0+-");
+});
