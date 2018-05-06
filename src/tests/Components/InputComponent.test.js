@@ -17,4 +17,10 @@ it('should render input-box list', ()=> {
   const wrapper = shallow(<InputComponent />);
   const div = wrapper.find('.input-box');
   expect(div.exists()).toEqual(true);
-})
+});
+
+it('should render five list tags', () => {
+  const wrapper = shallow(<InputComponent />);
+  const li = wrapper.find('li');
+  expect((li).length).toBe(5);
+});
