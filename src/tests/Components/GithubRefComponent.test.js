@@ -32,3 +32,9 @@ it('should render hyperlink tag with a blank target', () => {
   const a = wrapper.find('a');
   expect(a.prop('target')).toEqual(target);
 });
+
+it('should render img tag inside hyperlink tag', () => {
+  const wrapper = shallow(<GitHubRefComponent/>);
+  const img = wrapper.find('a').find('img');
+  expect(img.exists()).toEqual(true);
+});
