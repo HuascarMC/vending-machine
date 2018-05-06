@@ -50,4 +50,4 @@ it('should match the snapshot', () => {
   const component = renderer.create(<GitHubRefComponent />);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-})
+});
