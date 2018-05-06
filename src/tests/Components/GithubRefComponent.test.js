@@ -21,7 +21,14 @@ it('should render hyperlink tag', () => {
 
 it('should have correct href in hyperlink tag', () => {
   const wrapper = shallow(<GitHubRefComponent/>);
-  const src = 'https://github.com/HuascarMC/vending-machine-server/tree/heroku-deploy'
+  const src = 'https://github.com/HuascarMC/vending-machine-server/tree/heroku-deploy';
   const a = wrapper.find('a');
   expect(a.prop('href')).toEqual(src);
+});
+
+it('should render hyperlink tag with a blank target', () => {
+  const wrapper = shallow(<GitHubRefComponent/>);
+  const target = '_blank';
+  const a = wrapper.find('a');
+  expect(a.prop('target')).toEqual(target);
 });
