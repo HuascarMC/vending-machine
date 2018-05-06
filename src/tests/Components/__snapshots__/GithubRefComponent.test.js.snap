@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div
+  className="github-logo"
+>
+  <a
+    href="https://github.com/HuascarMC/vending-machine-server/tree/heroku-deploy"
+    target="_blank"
+  >
+    <img
+      src="/images/github-logo.png"
+    />
+  </a>
+</div>
+`;
