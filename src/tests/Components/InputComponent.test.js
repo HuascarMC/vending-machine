@@ -55,6 +55,12 @@ it('should render p tag with quarter value', () => {
   expect(p.at(3).text()).toEqual('$0.25');
 });
 
+it('should render p tag with dollar value', () => {
+  const wrapper = shallow(<InputComponent />);
+  const p = wrapper.find('p');
+  expect(p.at(4).text()).toEqual('$1.00');
+});
+
 xit('should match the snapshot', () => {
   const component = renderer.create(<InputComponent />);
   let tree = component.toJSON();
