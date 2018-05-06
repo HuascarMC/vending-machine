@@ -45,3 +45,9 @@ it('should render img tag with correct src', () => {
   const src = '/images/github-logo.png';
   expect(img.prop('src')).toEqual(src)
 });
+
+it('should match the snapshot', () => {
+  const component = renderer.create(<GitHubRefComponent />);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+})
