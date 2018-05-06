@@ -12,3 +12,9 @@ it('should render github-logo div', () => {
   const div = wrapper.find('.github-logo');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render hyperlink tag', () => {
+  const wrapper = shallow(<GitHubRefComponent/>);
+  const a = wrapper.find('a');
+  expect(a.exists()).toEqual(true);
+})
