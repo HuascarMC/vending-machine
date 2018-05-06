@@ -19,8 +19,8 @@ it('should render amount inside change display', () => {
   expect(p.exists()).toEqual(true);
 });
 
-it('should render amount passed as props inside display', () => {
-  const wrapper = shallow(<DisplayComponent value={0.75}/>);
-  const p = wrapper.find('.display-text');
-  expect(p.text()).toEqual('0.75');
+it('should match the snapshot', () => {
+  const component = renderer.create(<DisplayComponent value={0.00}/>);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 });
