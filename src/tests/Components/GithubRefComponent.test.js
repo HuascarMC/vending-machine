@@ -38,3 +38,10 @@ it('should render img tag inside hyperlink tag', () => {
   const img = wrapper.find('a').find('img');
   expect(img.exists()).toEqual(true);
 });
+
+it('should render img tag with correct src', () => {
+  const wrapper = shallow(<GitHubRefComponent/>);
+  const img = wrapper.find('a').find('img');
+  const src = '/images/github-logo.png';
+  expect(img.prop('src')).toEqual(src)
+});
