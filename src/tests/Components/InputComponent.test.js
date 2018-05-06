@@ -12,3 +12,9 @@ it('should render input-wrapper div', () => {
   const div = wrapper.find('.input-wrapper');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render input-box list', ()=> {
+  const wrapper = shallow(<InputComponent />);
+  const div = wrapper.find('.input-box');
+  expect(div.exists()).toEqual(true);
+})
