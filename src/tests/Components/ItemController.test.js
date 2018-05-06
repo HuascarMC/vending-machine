@@ -50,3 +50,9 @@ it('should render soda quantity passed by props', () => {
   const li = wrapper.find('li').at(2);
   expect(li.text()).toEqual("SODA  0+-");
 });
+
+it('should render water quantity passed by props', () => {
+  const wrapper = shallow(<ItemController items={state}/>);
+  const li = wrapper.find('li').at(3);
+  expect(li.text()).toEqual("WATER 0+-");
+});
