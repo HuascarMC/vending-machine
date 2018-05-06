@@ -23,4 +23,10 @@ it('should render bucket as p tag title', () => {
   const wrapper = shallow(<ItemComponent />);
   const p = wrapper.find('.title');
   expect(p.text()).toEqual('bucket');
-})
+});
+
+it('should render div order-img-container', () => {
+  const wrapper = shallow(<ItemComponent />);
+  const div = wrapper.find('.order-img-container');
+  expect(div.exists()).toEqual(true);
+});
