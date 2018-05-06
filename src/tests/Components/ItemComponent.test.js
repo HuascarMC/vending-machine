@@ -6,3 +6,9 @@ import renderer from 'react-test-renderer';
 it('should render without crashing', () => {
   shallow(<ItemComponent />);
 });
+
+it('should render item-wrapper div', () => {
+  const wrapper = shallow(<ItemComponent />);
+  const div = wrapper.find('.item-wrapper');
+  expect(div.exists()).toEqual(true);
+});
