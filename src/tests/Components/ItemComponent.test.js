@@ -43,3 +43,9 @@ it('should render order-img src passed as props', () => {
   const src = '/images/coke.png';
   expect(img.prop('src')).toEqual(src);
 });
+
+it('should match the snapshot', () => {
+  const component = renderer.create(<ItemComponent />);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
