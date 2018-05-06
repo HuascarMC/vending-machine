@@ -31,3 +31,9 @@ it('should render four list tags', () => {
   const li = wrapper.find('li');
   expect((li).length).toBe(4);
 });
+
+it('should render coke quantity passed by props', () => {
+  const wrapper = shallow(<ItemController items={state}/>);
+  const li = wrapper.find('li').at(0);
+  expect(li.text()).toEqual("COKE  0+-");
+});
