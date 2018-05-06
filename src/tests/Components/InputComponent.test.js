@@ -83,9 +83,9 @@ it('should render button with gold css properties', () => {
   const wrapper = shallow(<InputComponent />);
   const button = wrapper.find('.gold');
   expect(button.exists()).toEqual(true);
-})
+});
 
-xit('should match the snapshot', () => {
+it('should match the snapshot', () => {
   const component = renderer.create(<InputComponent />);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
