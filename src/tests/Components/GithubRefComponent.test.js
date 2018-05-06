@@ -17,4 +17,11 @@ it('should render hyperlink tag', () => {
   const wrapper = shallow(<GitHubRefComponent/>);
   const a = wrapper.find('a');
   expect(a.exists()).toEqual(true);
-})
+});
+
+it('should have correct href in hyperlink tag', () => {
+  const wrapper = shallow(<GitHubRefComponent/>);
+  const src = 'https://github.com/HuascarMC/vending-machine-server/tree/heroku-deploy'
+  const a = wrapper.find('a');
+  expect(a.prop('href')).toEqual(src);
+});
