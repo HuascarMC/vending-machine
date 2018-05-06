@@ -15,6 +15,12 @@ it('should render item-wrapper div', () => {
 
 it('should render p tag title', () => {
   const wrapper = shallow(<ItemComponent />);
-  const div = wrapper.find('.title');
-  expect(div.exists()).toEqual(true);
+  const p = wrapper.find('.title');
+  expect(p.exists()).toEqual(true);
 });
+
+it('should render bucket as p tag title', () => {
+  const wrapper = shallow(<ItemComponent />);
+  const p = wrapper.find('.title');
+  expect(p.text()).toEqual('bucket');
+})
