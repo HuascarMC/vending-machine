@@ -12,3 +12,9 @@ it('should render machine-display div', () => {
   const div = wrapper.find('.machine-display');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render amount inside change display', () => {
+  const wrapper = shallow(<DisplayComponent amount={1.00}/>);
+  const p = wrapper.find('.display-text');
+  expect(p.exists()).toEqual(true);
+});
