@@ -14,7 +14,13 @@ it('should render machine-display div', () => {
 });
 
 it('should render amount inside change display', () => {
-  const wrapper = shallow(<DisplayComponent amount={1.00}/>);
+  const wrapper = shallow(<DisplayComponent value={0.00}/>);
   const p = wrapper.find('.display-text');
   expect(p.exists()).toEqual(true);
+});
+
+it('should render amount passed as props inside display', () => {
+  const wrapper = shallow(<DisplayComponent value={0.75}/>);
+  const p = wrapper.find('.display-text');
+  expect(p.text()).toEqual('0.75');
 });
