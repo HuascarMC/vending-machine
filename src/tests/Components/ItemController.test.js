@@ -56,3 +56,10 @@ it('should render water quantity passed by props', () => {
   const li = wrapper.find('li').at(3);
   expect(li.text()).toEqual("WATER 0+-");
 });
+
+
+it('should match the snapshot', () => {
+  const component = renderer.create(<ItemController items={0.00}/>);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
