@@ -77,6 +77,12 @@ it('should render three buttons with silver css properties', () => {
   const wrapper = shallow(<InputComponent />);
   const buttons = wrapper.find('.silver');
   expect(buttons.length).toEqual(3);
+});
+
+it('should render button with gold css properties', () => {
+  const wrapper = shallow(<InputComponent />);
+  const button = wrapper.find('.gold');
+  expect(button.exists()).toEqual(true);
 })
 
 xit('should match the snapshot', () => {
