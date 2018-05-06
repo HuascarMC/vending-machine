@@ -25,3 +25,9 @@ it('should render u-list', () => {
   const ul = wrapper.find('ul');
   expect(ul.exists()).toEqual(true);
 });
+
+it('should render four list tags', () => {
+  const wrapper = shallow(<ItemController items={state}/>);
+  const li = wrapper.find('li');
+  expect((li).length).toBe(4);
+});
