@@ -61,6 +61,12 @@ it('should render p tag with dollar value', () => {
   expect(p.at(4).text()).toEqual('$1.00');
 });
 
+it('should render button tag in p tags', () => {
+  const wrapper = shallow(<InputComponent />);
+  const buttons = wrapper.find('button');
+  expect(buttons.length).toBe(5);
+})
+
 xit('should match the snapshot', () => {
   const component = renderer.create(<InputComponent />);
   let tree = component.toJSON();
