@@ -65,12 +65,18 @@ it('should render button tag in p tags', () => {
   const wrapper = shallow(<InputComponent />);
   const buttons = wrapper.find('button');
   expect(buttons.length).toBe(5);
-})
+});
 
 it('should render button with bronze css properties', () => {
   const wrapper = shallow(<InputComponent />);
   const button = wrapper.find('.bronze');
   expect(button.exists()).toEqual(true);
+});
+
+it('should render three buttons with silver css properties', () => {
+  const wrapper = shallow(<InputComponent />);
+  const buttons = wrapper.find('.silver');
+  expect(buttons.length).toEqual(3);
 })
 
 xit('should match the snapshot', () => {
