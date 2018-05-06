@@ -36,3 +36,10 @@ it('should render order-img', () => {
   const img = wrapper.find('.order-img');
   expect(img.exists()).toEqual(true);
 });
+
+it('should render order-img src passed as props', () => {
+  const wrapper = shallow(<ItemComponent itemImage='/images/coke.png'/>);
+  const img = wrapper.find('.order-img');
+  const src = '/images/coke.png';
+  expect(img.prop('src')).toEqual(src);
+});
