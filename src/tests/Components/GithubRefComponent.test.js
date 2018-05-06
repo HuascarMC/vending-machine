@@ -6,3 +6,9 @@ import renderer from 'react-test-renderer';
 it('should render without crashing', () => {
   shallow(<GitHubRefComponent />);
 });
+
+it('should render github-logo div', () => {
+  const wrapper = shallow(<GitHubRefComponent/>);
+  const div = wrapper.find('.github-logo');
+  expect(div.exists()).toEqual(true);
+});
