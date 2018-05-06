@@ -24,3 +24,15 @@ it('should render five list tags', () => {
   const li = wrapper.find('li');
   expect((li).length).toBe(5);
 });
+
+it('should render p tags in list tags', () => {
+  const wrapper = shallow(<InputComponent />);
+  const p = wrapper.find('li').find('p');
+  expect((p).length).toBe(5);
+})
+
+xit('should match the snapshot', () => {
+  const component = renderer.create(<InputComponent />);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
