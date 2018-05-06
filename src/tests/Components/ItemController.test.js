@@ -19,3 +19,9 @@ it('should render controller-wrapper div', () => {
   const div = wrapper.find('.controller-wrapper');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render u-list', () => {
+  const wrapper = shallow(<ItemController items={state}/>);
+  const ul = wrapper.find('ul');
+  expect(ul.exists()).toEqual(true);
+});
