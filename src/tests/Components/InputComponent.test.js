@@ -43,6 +43,12 @@ it('should render p tag with nickel value', () => {
   expect(p.at(1).text()).toEqual('$0.05');
 });
 
+it('should render p tag with dime value', () => {
+  const wrapper = shallow(<InputComponent />);
+  const p = wrapper.find('p');
+  expect(p.at(2).text()).toEqual('$0.10');
+});
+
 xit('should match the snapshot', () => {
   const component = renderer.create(<InputComponent />);
   let tree = component.toJSON();
