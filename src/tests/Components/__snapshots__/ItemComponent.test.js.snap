@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div
+  className="item-wrapper"
+>
+  <p
+    className="title"
+  >
+    bucket
+  </p>
+  <div
+    className="order-img-container"
+  >
+    <img
+      className="order-img"
+      src={undefined}
+    />
+  </div>
+</div>
+`;

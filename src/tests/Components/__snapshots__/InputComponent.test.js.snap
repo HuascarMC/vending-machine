@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div>
+  <div
+    className="input-wrapper"
+  >
+    <ul
+      className="input-box"
+    >
+      <li>
+        <p
+          className="coin-value"
+        >
+          $0.01
+          <button
+            className="coin bronze"
+            onClick={[Function]}
+          />
+        </p>
+      </li>
+      <li>
+        <p
+          className="coin-value"
+        >
+          $0.05
+          <button
+            className="coin silver"
+            onClick={[Function]}
+          />
+        </p>
+      </li>
+      <li>
+        <p
+          className="coin-value"
+        >
+          $0.10
+          <button
+            className="coin silver"
+            onClick={[Function]}
+          />
+        </p>
+      </li>
+      <li>
+        <p
+          className="coin-value"
+        >
+          $0.25
+          <button
+            className="coin silver"
+            onClick={[Function]}
+          />
+        </p>
+      </li>
+      <li>
+        <p
+          className="coin-value"
+        >
+          $1.00
+          <button
+            className="coin gold"
+            onClick={[Function]}
+          />
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

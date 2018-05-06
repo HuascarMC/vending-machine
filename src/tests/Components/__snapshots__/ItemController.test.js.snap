@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div
+  className="controller-wrapper"
+>
+  <ul>
+    <li>
+      COKE  
+      <button
+        className="plus"
+        onClick={[Function]}
+      >
+        +
+      </button>
+      <button
+        className="minus"
+        onClick={[Function]}
+      >
+        -
+      </button>
+    </li>
+    <li>
+      PEPSI 
+      <button
+        className="plus"
+        onClick={[Function]}
+      >
+        +
+      </button>
+      <button
+        className="minus"
+        onClick={[Function]}
+      >
+        -
+      </button>
+    </li>
+    <li>
+      SODA  
+      <button
+        className="plus"
+        onClick={[Function]}
+      >
+        +
+      </button>
+      <button
+        className="minus"
+        onClick={[Function]}
+      >
+        -
+      </button>
+    </li>
+    <li>
+      WATER 
+      <button
+        className="plus"
+        onClick={[Function]}
+      >
+        +
+      </button>
+      <button
+        className="minus"
+        onClick={[Function]}
+      >
+        -
+      </button>
+    </li>
+  </ul>
+</div>
+`;
