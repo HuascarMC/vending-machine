@@ -67,6 +67,12 @@ it('should render button tag in p tags', () => {
   expect(buttons.length).toBe(5);
 })
 
+it('should render button with bronze css properties', () => {
+  const wrapper = shallow(<InputComponent />);
+  const button = wrapper.find('.bronze');
+  expect(button.exists()).toEqual(true);
+})
+
 xit('should match the snapshot', () => {
   const component = renderer.create(<InputComponent />);
   let tree = component.toJSON();
