@@ -30,3 +30,9 @@ it('should render div order-img-container', () => {
   const div = wrapper.find('.order-img-container');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render order-img', () => {
+  const wrapper = shallow(<ItemComponent />);
+  const img = wrapper.find('.order-img');
+  expect(img.exists()).toEqual(true);
+});
