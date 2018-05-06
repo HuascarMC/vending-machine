@@ -22,14 +22,20 @@ it('should render input-box list', ()=> {
 it('should render five list tags', () => {
   const wrapper = shallow(<InputComponent />);
   const li = wrapper.find('li');
-  expect((li).length).toBe(5);
+  expect(li.length).toBe(5);
 });
 
 it('should render p tags in list tags', () => {
   const wrapper = shallow(<InputComponent />);
   const p = wrapper.find('li').find('p');
-  expect((p).length).toBe(5);
-})
+  expect(p.length).toBe(5);
+});
+
+it('should render p tag with penny value', () => {
+  const wrapper = shallow(<InputComponent />);
+  const p = wrapper.find('p');
+  expect(p.at(0).text()).toEqual('$0.01');
+});
 
 xit('should match the snapshot', () => {
   const component = renderer.create(<InputComponent />);
