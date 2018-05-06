@@ -12,3 +12,9 @@ it('should render item-wrapper div', () => {
   const div = wrapper.find('.item-wrapper');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render p tag title', () => {
+  const wrapper = shallow(<ItemComponent />);
+  const div = wrapper.find('.title');
+  expect(div.exists()).toEqual(true);
+});
