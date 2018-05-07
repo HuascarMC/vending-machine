@@ -18,3 +18,9 @@ it('should render two order-button display', () => {
   const buttons = wrapper.find('.order-button');
   expect(buttons.length).toEqual(2);
 });
+
+it('should render first button text return', () => {
+  const wrapper = shallow(<OrderButtonComponent />);
+  const buttons = wrapper.find('.order-button');
+  expect(buttons.at(0).text()).toEqual('RETURN');
+});
