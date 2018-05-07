@@ -12,3 +12,9 @@ it('should render order-button-wrapper div', () => {
   const div = wrapper.find('.order-button-wrapper');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render two order-button display', () => {
+  const wrapper = shallow(<OrderButtonComponent />);
+  const buttons = wrapper.find('.order-button');
+  expect(buttons.length).toEqual(2);
+});
