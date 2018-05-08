@@ -35,4 +35,4 @@ it('should match the snapshot', () => {
   const component = renderer.create(<OrderButtonComponent />);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-})
+});
