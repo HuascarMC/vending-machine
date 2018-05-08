@@ -10,5 +10,11 @@ var state = {
 }
 
 it('should render without crashing', () => {
-  shallow(<StateComponent state={ state }/>);
+  shallow(<StateComponent state={ state } />);
+});
+
+it('should render state-wrapper div', () => {
+  const wrapper = shallow(<StateComponent state={ state} />);
+  const div = wrapper.find('.state-wrapper');
+  expect(div.exists()).toEqual(true);
 });
