@@ -54,3 +54,9 @@ it('should render p tag with text ENOUGH BALANCE: true', () => {
   const p = wrapper.find('.state-text').at(2);
   expect(p.text()).toEqual('Enough balance: true ');
 });
+
+it('should match the snapshot', () => {
+  const component = renderer.create(<StateComponent state={ state }/>);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
