@@ -14,31 +14,37 @@ it('should render without crashing', () => {
 });
 
 it('should render state-wrapper div', () => {
-  const wrapper = shallow(<StateComponent state={ state} />);
+  const wrapper = shallow(<StateComponent state={ state } />);
   const div = wrapper.find('.state-wrapper');
   expect(div.exists()).toEqual(true);
 });
 
 it('should render p tag with text state', () => {
-  const wrapper = shallow(<StateComponent state={ state} />);
+  const wrapper = shallow(<StateComponent state={ state } />);
   const p = wrapper.find('p').at(0);
   expect(p.text()).toEqual('state');
 });
 
 it('should render p tag with title selector', () => {
-  const wrapper = shallow(<StateComponent state={ state} />);
+  const wrapper = shallow(<StateComponent state={ state } />);
   const p = wrapper.find('.title');
   expect(p.exists()).toEqual(true);
 });
 
 it('should render three p tags with state-text selector', () => {
-  const wrapper = shallow(<StateComponent state={ state} />);
+  const wrapper = shallow(<StateComponent state={ state } />);
   const p = wrapper.find('.state-text');
   expect(p.length).toEqual(3);
 });
 
 it('should render p tag with text IN STOCK: true', () => {
-  const wrapper = shallow(<StateComponent state={ state} />);
+  const wrapper = shallow(<StateComponent state={ state } />);
   const p = wrapper.find('.state-text').at(0);
   expect(p.text()).toEqual('In Stock: true ');
+});
+
+it('should render p tag with text ENOUGH CHANGE: true', () => {
+  const wrapper = shallow(<StateComponent state={ state } />);
+  const p = wrapper.find('.state-text').at(1);
+  expect(p.text()).toEqual('Enough change: true ');
 });
