@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div
+  className="order-button-wrapper"
+>
+  <button
+    className="order-button"
+    onClick={[Function]}
+  >
+    RETURN
+  </button>
+  <button
+    className="order-button"
+    onClick={[Function]}
+  >
+    PUSH
+  </button>
+</div>
+`;
