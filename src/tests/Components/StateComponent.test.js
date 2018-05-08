@@ -3,7 +3,7 @@ import StateComponent from '../../Components/StateComponent'
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-state = {
+var state = {
   coinInventoryState: true,
   stockInventoryState: true,
   balanceState: true
