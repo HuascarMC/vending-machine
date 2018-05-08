@@ -30,3 +30,9 @@ it('should render second button text push', () => {
   const buttons = wrapper.find('.order-button');
   expect(buttons.at(1).text()).toEqual('PUSH');
 });
+
+it('should match the snapshot', () => {
+  const component = renderer.create(<OrderButtonComponent />);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});

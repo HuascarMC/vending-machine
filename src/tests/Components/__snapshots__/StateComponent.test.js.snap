@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div
+  className="state-wrapper"
+>
+  <p
+    className="title"
+  >
+    state
+  </p>
+  <p
+    className="state-text"
+  >
+    In Stock: 
+    true
+     
+  </p>
+  <p
+    className="state-text"
+  >
+    Enough change: 
+    true
+     
+  </p>
+  <p
+    className="state-text"
+  >
+    Enough balance: 
+    true
+     
+  </p>
+</div>
+`;

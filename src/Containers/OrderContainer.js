@@ -9,7 +9,7 @@ class OrderContainer extends React.Component {
     return(
       <div className="order-wrapper">
         <ItemComponent itemImage={ this.props.state.itemImage }/>
-        <StateComponent state={ this.props.state }/>
+        <StateComponent state={ this.props.state.transactionState }/>
       </div>
     );
   }
