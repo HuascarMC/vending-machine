@@ -18,3 +18,9 @@ it('should render state-wrapper div', () => {
   const div = wrapper.find('.state-wrapper');
   expect(div.exists()).toEqual(true);
 });
+
+it('should render p tag with text state', () => {
+  const wrapper = shallow(<StateComponent state={ state} />);
+  const p = wrapper.find('p').at(0);
+  expect(p.text()).toEqual('state');
+});
