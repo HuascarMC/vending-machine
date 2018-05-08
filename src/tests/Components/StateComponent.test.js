@@ -48,3 +48,9 @@ it('should render p tag with text ENOUGH CHANGE: true', () => {
   const p = wrapper.find('.state-text').at(1);
   expect(p.text()).toEqual('Enough change: true ');
 });
+
+it('should render p tag with text ENOUGH BALANCE: true', () => {
+  const wrapper = shallow(<StateComponent state={ state } />);
+  const p = wrapper.find('.state-text').at(2);
+  expect(p.text()).toEqual('Enough balance: true ');
+});
