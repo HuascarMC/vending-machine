@@ -24,3 +24,9 @@ it('should render p tag with text state', () => {
   const p = wrapper.find('p').at(0);
   expect(p.text()).toEqual('state');
 });
+
+it('should render p tag with title selector', () => {
+  const wrapper = shallow(<StateComponent state={ state} />);
+  const p = wrapper.find('.title');
+  expect(p.exists()).toEqual(true);
+});
