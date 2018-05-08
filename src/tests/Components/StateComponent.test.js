@@ -36,3 +36,9 @@ it('should render three p tags with state-text selector', () => {
   const p = wrapper.find('.state-text');
   expect(p.length).toEqual(3);
 });
+
+it('should render p tag with text IN STOCK: true', () => {
+  const wrapper = shallow(<StateComponent state={ state} />);
+  const p = wrapper.find('.state-text').at(0);
+  expect(p.text()).toEqual('In Stock: true ');
+});
